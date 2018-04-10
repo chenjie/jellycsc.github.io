@@ -5,30 +5,28 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Apr 2018 15:36:31 -0400</pubDate>
-    <lastBuildDate>Tue, 10 Apr 2018 15:36:31 -0400</lastBuildDate>
+    <pubDate>Tue, 10 Apr 2018 16:16:52 -0400</pubDate>
+    <lastBuildDate>Tue, 10 Apr 2018 16:16:52 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>Teach Girlfriend to make a Web Pages like Zhihu</title>
+        <title>我的第一篇日志！</title>
         <description>
-My girlfriend is learning html and css recently. I told her to follow the video. Here, I recommend a video in Chinese that suite for fresh learners. The name of course is Getting HTML web pages dev in 8 hours ( 8小时学会HTML网页开发 ) . I watched this video at very first time. The teacher named Eighteen Swallows ( 燕十八 ) . He teached very clear even himself being on screen to show what is float or box-model.
-
+打算写博客已经很久了，一直没有下决心去建站维护，大学这几年也没有真正去回头总结过自己学到的知识。
+这几天我下定决心整理创建Github repo，并且创建了这个博客。
 </description>
-        <pubDate>Sat, 21 Mar 2015 11:14:54 -0400</pubDate>
-        <link>http://localhost:4000/2015/03/21/teach-girlfriend-html-css/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/03/21/teach-girlfriend-html-css/</guid>
+        <pubDate>Tue, 10 Apr 2018 12:08:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/10/my-first-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/10/my-first-post/</guid>
         
-        <category>BootStrap</category>
+        <category>Daily</category>
         
-        <category>HTML</category>
+        <category>Github</category>
         
-        <category>CSS</category>
-        
-        <category>Zhihu</category>
+        <category>First</category>
         
         
-        <category>Bootstrap</category>
+        <category>Daily</category>
         
       </item>
     
