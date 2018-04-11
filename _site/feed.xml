@@ -5,9 +5,27 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 Apr 2018 14:53:11 -0400</pubDate>
-    <lastBuildDate>Wed, 11 Apr 2018 14:53:11 -0400</lastBuildDate>
+    <pubDate>Wed, 11 Apr 2018 17:11:02 -0400</pubDate>
+    <lastBuildDate>Wed, 11 Apr 2018 17:11:02 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Cute BB-8</title>
+        <description>
+给博客增加一点动感:)
+
+&lt;img src=&quot;/mdres/posts/2018/bb8.gif&quot; width=&quot;400&quot; /&gt;
+</description>
+        <pubDate>Wed, 11 Apr 2018 13:04:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/11/cute-bot/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/11/cute-bot/</guid>
+        
+        <category>Cute</category>
+        
+        
+        <category>SUGAR</category>
+        
+      </item>
     
       <item>
         <title>DISQUS显示问题</title>
@@ -32,8 +50,7 @@
       <item>
         <title>我的第一篇日志！</title>
         <description>
-打算写博客已经很久了，一直没有下决心去建站维护，大学这几年也没有真正去回头总结过自己学到的知识。
-这几天我下定决心整理创建Github repo，并且创建了这个博客。
+打算写博客已经很久了，一直没有下决心去建站维护，大学这几年也没有真正去回头总结过自己学到的知识。这几天我下定决心整理这几年做过的Project，存入Github仓库，并且创建了这个博客。
 </description>
         <pubDate>Tue, 10 Apr 2018 12:08:54 -0400</pubDate>
         <link>http://localhost:4000/2018/04/10/my-first-post/</link>
