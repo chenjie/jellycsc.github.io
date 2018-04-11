@@ -2,7 +2,7 @@
 layout: post
 title:  "我的第一篇日志！"
 date:   2018-04-10 16:08:54
-categories: Daily
+categories: TECH
 tags: Daily Github First
 ---
 

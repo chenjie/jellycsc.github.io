@@ -1,2 +1,2 @@
 # JellyCSC
-![](mdres/keep_learning.jpg)
+![](/mdres/keep_learning.jpg)

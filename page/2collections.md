@@ -17,9 +17,8 @@ type: page
 ## 建站相关
 
 * [Favicon Generator](https://realfavicongenerator.net/) 一键生成网站图标logo的小工具  
-![Acorn Logo](../mdres/Collections/android-chrome-192x192.png)
-![Penrose triangle Logo](../mdres/Collections/apple-touch-icon.png)
-
+![Acorn Logo](/mdres/collections/android-chrome-192x192.png)
+![Penrose triangle Logo](/mdres/collections/apple-touch-icon.png)
 
 ## Comments
 

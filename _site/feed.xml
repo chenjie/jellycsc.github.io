@@ -5,9 +5,29 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Apr 2018 22:43:32 -0400</pubDate>
-    <lastBuildDate>Tue, 10 Apr 2018 22:43:32 -0400</lastBuildDate>
+    <pubDate>Wed, 11 Apr 2018 14:04:46 -0400</pubDate>
+    <lastBuildDate>Wed, 11 Apr 2018 14:04:46 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>DISQUS显示问题</title>
+        <description>
+今早我发现Chrome浏览时评论区显示有背景颜色不协调的问题↓&lt;br /&gt;
+&lt;img src=&quot;/mdres/posts/2018/discus_display_issue.png&quot; alt=&quot;DISQUS&quot; /&gt;
+
+</description>
+        <pubDate>Wed, 11 Apr 2018 09:03:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/11/disqus-display-issue/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/11/disqus-display-issue/</guid>
+        
+        <category>Daily</category>
+        
+        <category>DISQUS</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
     
       <item>
         <title>我的第一篇日志！</title>
@@ -26,7 +46,7 @@
         <category>First</category>
         
         
-        <category>Daily</category>
+        <category>TECH</category>
         
       </item>
     
