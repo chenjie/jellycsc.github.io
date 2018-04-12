@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/2018/04/10/my-first-post/</loc>
+<lastmod>2018-04-10T12:08:54-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2018/04/11/disqus-display-issue/</loc>
+<lastmod>2018-04-11T09:03:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2018/04/11/cute-bot/</loc>
+<lastmod>2018-04-11T13:04:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2018/04/12/youtube/</loc>
+<lastmod>2018-04-12T10:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/category/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/collection/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/archive/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+</urlset>
