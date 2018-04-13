@@ -19,8 +19,8 @@ $$ \begin{align}
 -log[P(y_1^* ... y_N^*)] & = -\sum_{i=1}^N log[P(y_i^*)] &&\text{Because of the i.i.d assumption.}&\\
 \end{align} $$
 
-If the target is 0, $ log[P(y_i^\*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$  
-If the target is 1, $ log[P(y_i^\*)] = t_i \cdot log[P(y_i)]$
+If the target is 0, $$ log[P(y_i^\*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$$  
+If the target is 1, $$ log[P(y_i^\*)] = t_i \cdot log[P(y_i)]$$
 
 And it doesn't hurt to add 0 term to make the formula more general,
 
