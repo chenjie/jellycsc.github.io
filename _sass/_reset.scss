@@ -84,6 +84,7 @@ blockquote {
     }
 }
 table {
+    overflow-x: scroll;
     border-top: 2px solid #777;
     border-bottom: 2px solid #777;
     margin: 8px 0;
