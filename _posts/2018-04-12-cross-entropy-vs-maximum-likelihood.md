@@ -37,7 +37,7 @@ $$ \begin{align}
 
 
 
-## Code snippet from autodiff
+## Code snippet from Autograd
 ```python
 from __future__ import absolute_import
 from __future__ import print_function
