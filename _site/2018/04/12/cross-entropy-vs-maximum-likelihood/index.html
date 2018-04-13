@@ -9,6 +9,8 @@
     <title>Cross entropy loss vs. max likelihood</title>
     <meta name="description" content="  Quick proof of binary classification:Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing log likeliho...">
 
+    <script src=" /js/jquery.min.js " charset="utf-8"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,6 +47,35 @@
     </script>
 
 
+<script type="text/javascript">
+// resize all LaTeX Display elements to they fit in on screen
+function cvonk_ResizeMathJax() {
+    jQuery('.MathJax_Display').each(function(ii, obj) {
+      var latex = obj.children[0];
+      var w = latex.offsetWidth;
+      var h = latex.offsetHeight;    
+      var W = obj.offsetWidth;
+      if (w > W) {
+          obj.style.fontSize = 95 * W / w + "%";
+      }
+    });
+}
+window.MathJax = {
+    AuthorInit: function() {
+  MathJax.Hub.Register.StartupHook("Begin", function() {
+      MathJax.Hub.Queue(function() {
+    cvonk_ResizeMathJax();
+      });
+  });
+    },
+    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+    extensions: ["tex2jax.js"]
+};
+window.addEventListener("resize", function() {
+    cvonk_ResizeMathJax();  
+});
+</script>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
     tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
@@ -53,6 +84,7 @@
     }
 });
 </script>
+
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -204,6 +236,7 @@
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
   <li><a href="#quick-proof-of-binary-classification" id="markdown-toc-quick-proof-of-binary-classification">Quick proof of binary classification:</a></li>
+  <li><a href="#code-snippet-from-autograd" id="markdown-toc-code-snippet-from-autograd">Code snippet from Autograd</a></li>
 </ul>
 
 <p>Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing <strong>log</strong> likelihood function $\Rightarrow$ (toggles because of the minus sign) Minimizing <strong>negative</strong> log likelihood function $\Rightarrow$ Minimizing cross entropy loss.</p>
@@ -231,6 +264,49 @@ If the target is 1, $ log[P(y_i^*)] = t_i \cdot log[P(y_i)]$</p>
 -\sum_{i=1}^N log[P(y_i^*)] & = -\sum_{i=1}^N t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]\\
  & = CE
 \end{align} %]]></script>
+
+<h2 id="code-snippet-from-autograd">Code snippet from Autograd</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="kn">import</span> <span class="nb">range</span>
+<span class="kn">import</span> <span class="nn">autograd.numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">autograd</span> <span class="kn">import</span> <span class="n">grad</span>
+<span class="kn">from</span> <span class="nn">autograd.test_util</span> <span class="kn">import</span> <span class="n">check_grads</span>
+
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">logistic_predictions</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+    <span class="c"># Outputs probability of a label being true according to logistic model.</span>
+    <span class="k">return</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">weights</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">training_loss</span><span class="p">(</span><span class="n">weights</span><span class="p">):</span>
+    <span class="c"># Training loss is the negative log-likelihood of the training labels.</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="n">logistic_predictions</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">inputs</span><span class="p">)</span>
+    <span class="n">label_probabilities</span> <span class="o">=</span> <span class="n">preds</span> <span class="o">*</span> <span class="n">targets</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">preds</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">targets</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">label_probabilities</span><span class="p">))</span>
+
+<span class="c"># Build a toy dataset.</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.52</span><span class="p">,</span> <span class="mf">1.12</span><span class="p">,</span>  <span class="mf">0.77</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.88</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.08</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.52</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.30</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.74</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.49</span><span class="p">,</span> <span class="mf">1.39</span><span class="p">]])</span>
+<span class="n">targets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">])</span>
+
+<span class="c"># Build a function that returns gradients of training loss using autograd.</span>
+<span class="n">training_gradient_fun</span> <span class="o">=</span> <span class="n">grad</span><span class="p">(</span><span class="n">training_loss</span><span class="p">)</span>
+
+<span class="c"># Check the gradients numerically, just to be safe.</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">check_grads</span><span class="p">(</span><span class="n">training_loss</span><span class="p">,</span> <span class="n">modes</span><span class="o">=</span><span class="p">[</span><span class="s">'rev'</span><span class="p">])(</span><span class="n">weights</span><span class="p">)</span>
+
+<span class="c"># Optimize weights using gradient descent.</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Initial loss:"</span><span class="p">,</span> <span class="n">training_loss</span><span class="p">(</span><span class="n">weights</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">weights</span> <span class="o">-=</span> <span class="n">training_gradient_fun</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Trained loss:"</span><span class="p">,</span> <span class="n">training_loss</span><span class="p">(</span><span class="n">weights</span><span class="p">))</span>
+</code></pre></div></div>
 
         </article>
         <hr>

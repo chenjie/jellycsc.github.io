@@ -9,6 +9,8 @@
     <title>Collections</title>
     <meta name="description" content="">
 
+    <script src=" /js/jquery.min.js " charset="utf-8"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,6 +47,35 @@
     </script>
 
 
+<script type="text/javascript">
+// resize all LaTeX Display elements to they fit in on screen
+function cvonk_ResizeMathJax() {
+    jQuery('.MathJax_Display').each(function(ii, obj) {
+      var latex = obj.children[0];
+      var w = latex.offsetWidth;
+      var h = latex.offsetHeight;    
+      var W = obj.offsetWidth;
+      if (w > W) {
+          obj.style.fontSize = 95 * W / w + "%";
+      }
+    });
+}
+window.MathJax = {
+    AuthorInit: function() {
+  MathJax.Hub.Register.StartupHook("Begin", function() {
+      MathJax.Hub.Queue(function() {
+    cvonk_ResizeMathJax();
+      });
+  });
+    },
+    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+    extensions: ["tex2jax.js"]
+};
+window.addEventListener("resize", function() {
+    cvonk_ResizeMathJax();  
+});
+</script>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
     tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
@@ -53,6 +84,7 @@
     }
 });
 </script>
+
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
