@@ -97,3 +97,7 @@ pre {
     .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
     .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 }
+
+.scroll_wrap{
+    overflow-x: auto;
+}
