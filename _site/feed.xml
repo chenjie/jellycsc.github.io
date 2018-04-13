@@ -5,12 +5,29 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Apr 2018 11:48:43 -0400</pubDate>
-    <lastBuildDate>Fri, 13 Apr 2018 11:48:43 -0400</lastBuildDate>
+    <pubDate>Fri, 13 Apr 2018 15:04:15 -0400</pubDate>
+    <lastBuildDate>Fri, 13 Apr 2018 15:04:15 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>Cross entropy loss vs. max likelihood</title>
+        <title>XOR using NAND, AND, OR</title>
+        <description>
+This is a quite interesting problem. It’s not difficult but requires some effort. As long as what I wrote inspires you, you are no longer afraid of trying different logic gates and manipulating them. This is the essence of teaching and learning.
+
+</description>
+        <pubDate>Fri, 13 Apr 2018 10:12:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/13/xor-and-or-not/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/13/xor-and-or-not/</guid>
+        
+        <category>Logic</category>
+        
+        
+        <category>ML</category>
+        
+      </item>
+    
+      <item>
+        <title>Cross Entropy vs. Max likelihood</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#quick-proof-of-binary-classification&quot; id=&quot;markdown-toc-quick-proof-of-binary-classification&quot;&gt;Quick proof of binary classification:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -26,8 +43,13 @@ represents the probability of getting the correct prediction (i.e. matches the t
 -log[P(y_1^* ... y_N^*)] &amp; = -\sum_{i=1}^N log[P(y_i^*)] &amp;&amp;\text{Because of the i.i.d assumption.}&amp;\\
 \end{align} %]]&gt;&lt;/script&gt;
 
-If the target is 0, $ log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$&lt;br /&gt;
-If the target is 1, $ log[P(y_i^*)] = t_i \cdot log[P(y_i)]$
+If the target is 0,
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]&lt;/script&gt;
+
+If the target is 1,
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;log[P(y_i^*)] = t_i \cdot log[P(y_i)]&lt;/script&gt;
 
 And it doesn’t hurt to add 0 term to make the formula more general,
 

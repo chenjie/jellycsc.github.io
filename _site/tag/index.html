@@ -66,7 +66,7 @@ function detect_ResizeMathJax() {
 // resize all LaTeX Display elements to they fit in on screen
 function cvonk_ResizeMathJax(ratio) {
     jQuery('.MathJax_Display').each(function(ii, obj) {
-        obj.style.fontSize = 110 * ratio + "%";
+        obj.style.fontSize = 100 * ratio + "%";
     });
 }
 window.MathJax = {
@@ -80,9 +80,9 @@ window.MathJax = {
     jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
     extensions: ["tex2jax.js"]
 };
-window.addEventListener("resize", function() {
-    cvonk_ResizeMathJax(detect_ResizeMathJax()); 
-});
+// window.addEventListener("resize", function() {
+//     cvonk_ResizeMathJax(detect_ResizeMathJax()); 
+// });
 window.addEventListener("orientationchange", function() {
     cvonk_ResizeMathJax(detect_ResizeMathJax()); 
 });
@@ -93,7 +93,7 @@ window.addEventListener("orientationchange", function() {
     MathJax.Hub.Config({
     tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
     "HTML-CSS": {
-      linebreaks: { automatic: true, width: "container" }
+      linebreaks: { width: "container" }
     }
 });
 </script>
@@ -171,6 +171,8 @@ window.addEventListener("orientationchange", function() {
                             <i class="fa fa-archive"></i>Archives
                         </a>
                     </li>
+                    
+                
                     
                 
                     
@@ -483,6 +485,45 @@ window.addEventListener("orientationchange", function() {
             </li>
           
         
+          <h2 id="Logic">Logic</h2>
+          
+            <li>
+                <time>
+                2018-04-13 Fri.
+                </time>
+                <a class="title" href="/2018/04/13/xor-and-or-not/">XOR using NAND, AND, OR</a>
+
+                
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#ML" title="Category: ML" rel="category">ML</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Logic" title="Tag: Logic" rel="tag">Logic</a>
+    
+  
+
+</span>
+
+            </li>
+          
+        
           <h2 id="MP3">MP3</h2>
           
             <li>
@@ -528,7 +569,7 @@ window.addEventListener("orientationchange", function() {
                 <time>
                 2018-04-12 Thu.
                 </time>
-                <a class="title" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross entropy loss vs. max likelihood</a>
+                <a class="title" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross Entropy vs. Max likelihood</a>
 
                 
 
@@ -569,7 +610,7 @@ window.addEventListener("orientationchange", function() {
                 <time>
                 2018-04-12 Thu.
                 </time>
-                <a class="title" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross entropy loss vs. max likelihood</a>
+                <a class="title" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross Entropy vs. Max likelihood</a>
 
                 
 
@@ -686,6 +727,12 @@ window.addEventListener("orientationchange", function() {
                     <li>
                         <a data-scroll href="#Github">
                             Github (1)
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a data-scroll href="#Logic">
+                            Logic (1)
                         </a>
                     </li>
                     
