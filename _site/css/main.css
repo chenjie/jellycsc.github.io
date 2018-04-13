@@ -675,7 +675,7 @@ pre {
   .highlight .gi {
     color: #a6e22e; }
 
-.scroll_wrap {
+#scroll_wrap {
   overflow-x: auto; }
 
 .page[index] a {

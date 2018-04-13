@@ -5,9 +5,26 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Apr 2018 16:05:17 -0400</pubDate>
-    <lastBuildDate>Fri, 13 Apr 2018 16:05:17 -0400</lastBuildDate>
+    <pubDate>Fri, 13 Apr 2018 17:44:27 -0400</pubDate>
+    <lastBuildDate>Fri, 13 Apr 2018 17:44:27 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>深入理解LSTM记忆元网络</title>
+        <description>
+本文翻译源自&lt;a href=&quot;https://ai.google/brain-team/&quot;&gt;Google Brain&lt;/a&gt;机器学习研究员&lt;a href=&quot;https://github.com/colah/&quot;&gt;colah&lt;/a&gt;的&lt;a href=&quot;http://colah.github.io/&quot;&gt;博客&lt;/a&gt;，原文链接请点击&lt;a href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;这里&lt;/a&gt;。
+
+</description>
+        <pubDate>Fri, 13 Apr 2018 13:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/13/understanding-lstm-networks/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/13/understanding-lstm-networks/</guid>
+        
+        <category>RNN</category>
+        
+        
+        <category>ML</category>
+        
+      </item>
     
       <item>
         <title>XOR using NAND, AND, OR</title>

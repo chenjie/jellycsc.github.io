@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cute BB-8</title>
-    <meta name="description" content="给博客增加一点动感:)">
+    <title>深入理解LSTM记忆元网络</title>
+    <meta name="description" content="本文翻译源自Google Brain机器学习研究员colah的博客，原文链接请点击这里。">
 
     <script src=" /js/jquery.min.js " charset="utf-8"></script>
 
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2018/04/11/cute-bot/">
+    <link rel="canonical" href="http://localhost:4000/2018/04/13/understanding-lstm-networks/">
     <link rel="alternate" type="application/rss+xml" title="JellyCSC" href="http://localhost:4000/feed.xml ">
 
 
@@ -193,11 +193,11 @@ window.addEventListener("orientationchange", function() {
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Cute BB-8</h1>
+        <h1>深入理解LSTM记忆元网络</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2018-04-11
+                <i class="fa fa-calendar"></i>2018-04-13
             </div>
 
             <div class="label-card">
@@ -217,7 +217,7 @@ window.addEventListener("orientationchange", function() {
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#SUGAR" title="Category: SUGAR" rel="category">SUGAR</a>
+        <a href="/category/#ML" title="Category: ML" rel="category">ML</a>
     
   
 
@@ -234,8 +234,8 @@ window.addEventListener("orientationchange", function() {
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Cute" title="Tag: Cute" rel="tag">Cute</a-->
-        <a href="/tag/#Cute" title="Tag: Cute" rel="tag">Cute</a>
+        <!--a href="/tag/#RNN" title="Tag: RNN" rel="tag">RNN</a-->
+        <a href="/tag/#RNN" title="Tag: RNN" rel="tag">RNN</a>
     
   
 
@@ -246,10 +246,24 @@ window.addEventListener("orientationchange", function() {
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        
-<p>给博客增加一点动感:)</p>
+        <ul id="markdown-toc">
+  <li><a href="#循环神经网络" id="markdown-toc-循环神经网络">循环神经网络</a></li>
+</ul>
 
-<p><img src="/mdres/posts/2018/bb8.gif" width="400" /></p>
+<p>本文翻译源自<a href="https://ai.google/brain-team/">Google Brain</a>机器学习研究员<a href="https://github.com/colah/">colah</a>的<a href="http://colah.github.io/">博客</a>，原文链接请点击<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">这里</a>。</p>
+
+<h2 id="循环神经网络">循环神经网络</h2>
+<p>人们每一秒思考都是连续的，而并非从零开始。当你在读这篇文章的时候，你通过先前的词句来理解当前词语的含义。你读到一半不会扔掉前面所有获取到的文章信息而从头开始思考，这说明了你的思维是连贯的。</p>
+
+<p>传统的神经网络正因为不能做到这个，所以这也似乎是它的缺陷。举个例子，假如你想要用神经网络来将每一个电影的时间点所发生的事件分类，你不清楚传统的神经网络是如何将它对于之前事件的推理传递到之后的事件中去。</p>
+
+<p>循环神经网络(<a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">RNN</a>)解决了这个问题，他们在自身的网络中拥有循环结构，使得不同时间点的推理信息得以保存传递下来。</p>
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/RNN-rolled.png" width="20%" /> <br />
+<strong>循环看到了吗？</strong> </p>
+
+<p><img src="/mdres/loading.gif" width="20" />持续更新中。。。</p>
 
         </article>
         <hr>
@@ -269,13 +283,6 @@ window.addEventListener("orientationchange", function() {
                     
                 
             
-        
-            
-            
-                
-                    
-                
-            
                 
                     
                 
@@ -293,6 +300,13 @@ window.addEventListener("orientationchange", function() {
                 
                     
                 
+            
+                
+                    
+                
+            
+        
+            
             
                 
                     
@@ -330,12 +344,10 @@ window.addEventListener("orientationchange", function() {
         <div class="post-recent">
     <div class="pre">
         
-        <p><span>&#9999;</span><strong>之前那篇: </strong> <a href="/2018/04/11/disqus-display-issue/">DISQUS显示问题</a></p>
+        <p><span>&#9999;</span><strong>之前那篇: </strong> <a href="/2018/04/13/xor-and-or-not/">XOR using NAND, AND, OR</a></p>
         
     </div>
     <div class="nex">
-        
-        <p><span>&#9998;</span><strong>下一篇咯: </strong> <a href="/2018/04/12/youtube/">Nice Youtube Video</a></p>
         
     </div>
 </div>
@@ -353,8 +365,8 @@ window.addEventListener("orientationchange", function() {
      */
 
     var disqus_config = function() {
-        this.page.url = 'http://localhost:4000/2018/04/11/cute-bot/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://localhost:4000/2018/04/11/cute-bot/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2018/04/13/understanding-lstm-networks/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2018/04/13/understanding-lstm-networks/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
