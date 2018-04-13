@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cross entropy loss vs. max likelihood"
+title:  "Cross Entropy vs. Max likelihood"
 date:   2018-04-12 19:45:54
 categories: ML
 tags: Math Stats
