@@ -56,9 +56,6 @@ def logistic_predictions(weights, inputs):
 def training_loss(weights):
     # Training loss is the negative log-likelihood of the training labels.
     preds = logistic_predictions(weights, inputs)
-    print(preds)
-    exit(-1)
-
     label_probabilities = preds * targets + (1 - preds) * (1 - targets)
     return -np.sum(np.log(label_probabilities))
 
