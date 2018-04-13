@@ -45,23 +45,32 @@
 {% endif %}
 
 <script type="text/javascript">
-// resize all LaTeX Display elements to they fit in on screen
-function cvonk_ResizeMathJax() {
+function detect_ResizeMathJax() {
+    var min_ratio = 1;
     jQuery('.MathJax_Display').each(function(ii, obj) {
       var latex = obj.children[0];
       var w = latex.offsetWidth;
       var h = latex.offsetHeight;    
       var W = obj.offsetWidth;
       if (w > W) {
-          obj.style.fontSize = 95 * W / w + "%";
+        if (W / w < min_ratio){
+          min_ratio = W / w;
+        }
       }
+    })
+  return min_ratio;};
+
+// resize all LaTeX Display elements to they fit in on screen
+function cvonk_ResizeMathJax(ratio) {
+    jQuery('.MathJax_Display').each(function(ii, obj) {
+        obj.style.fontSize = 110 * ratio + "%";
     });
 }
 window.MathJax = {
     AuthorInit: function() {
   MathJax.Hub.Register.StartupHook("Begin", function() {
       MathJax.Hub.Queue(function() {
-    cvonk_ResizeMathJax();
+        cvonk_ResizeMathJax(detect_ResizeMathJax());
       });
   });
     },
@@ -69,8 +78,12 @@ window.MathJax = {
     extensions: ["tex2jax.js"]
 };
 window.addEventListener("resize", function() {
-    cvonk_ResizeMathJax();  
+    cvonk_ResizeMathJax(detect_ResizeMathJax()); 
 });
+window.addEventListener("orientationchange", function() {
+    cvonk_ResizeMathJax(detect_ResizeMathJax()); 
+});
+
 </script>
 
 <script type="text/x-mathjax-config">
