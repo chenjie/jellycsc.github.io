@@ -77,9 +77,9 @@ window.MathJax = {
     jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
     extensions: ["tex2jax.js"]
 };
-window.addEventListener("resize", function() {
-    cvonk_ResizeMathJax(detect_ResizeMathJax()); 
-});
+// window.addEventListener("resize", function() {
+//     cvonk_ResizeMathJax(detect_ResizeMathJax()); 
+// });
 window.addEventListener("orientationchange", function() {
     cvonk_ResizeMathJax(detect_ResizeMathJax()); 
 });
@@ -90,7 +90,7 @@ window.addEventListener("orientationchange", function() {
     MathJax.Hub.Config({
     tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
     "HTML-CSS": {
-      linebreaks: { automatic: true, width: "container" }
+      linebreaks: { width: "container" }
     }
 });
 </script>
