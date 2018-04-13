@@ -52,6 +52,7 @@ How the hack do you come up with NAND and OR at the beginning when you start? Lo
 
 If I AND them, the last three row's bits would be exactly flipped. OK, I have some idea, what if I flip the AND bits? The first row's resulting bit will not be affected!! Let's try it out!
 
+{::options parse_block_html="true" /}
 <div id="scroll_wrap">
 | A | B | AND | NAND | OR | `→` | XOR  |
 |---|---|-----|----|-----|-----|------|
@@ -61,4 +62,4 @@ If I AND them, the last three row's bits would be exactly flipped. OK, I have so
 | 1 | 1 | 1 | 0 | 1 |    `→`   | 0 |
 </div>
 
-That's all my effort. Thank you for your patience. A quick Google search can give you the answer immediately, but your problem solving skill won't generalize unless you try it `YOURSELF`! 
+That's all my effort. Thank you for your patience. A quick Google search can give you the answer immediately, but your problem solving skill won't generalize unless you try it `YOURSELF`!
