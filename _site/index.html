@@ -45,6 +45,17 @@
     </script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+    "HTML-CSS": {
+      linebreaks: { automatic: true, width: "container" }
+    }
+});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 </head>
 
@@ -139,6 +150,95 @@
         <small>这里记录着我的学习之路</small>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross entropy loss vs. max likelihood</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-04-12
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#ML" title="Category: ML" rel="category">ML</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Math" title="Tag: Math" rel="tag">Math</a>&nbsp;
+    
+        <a href="/tag/#Stats" title="Tag: Stats" rel="tag">Stats</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#quick-proof-of-binary-classification" id="markdown-toc-quick-proof-of-binary-classification">Quick proof of binary classification:</a></li>
+</ul>
+
+<p>Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing <strong>log</strong> likelihood function $\Rightarrow$ (toggles because of the minus sign) Minimizing <strong>negative</strong> log likelihood function $\Rightarrow$ Minimizing cross entropy loss.</p>
+
+<h2 id="quick-proof-of-binary-classification">Quick proof of binary classification:</h2>
+<p>Assume $y_1^* … y_N^*$ is a mini-batch of predictions generated (i.i.d) by your neural network. Each of them
+represents the probability of getting the correct prediction (i.e. matches the target). Assume the true targets are $t_1 … t_N$ where each of them is either 0 or 1.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+-log[P(y_1^* ... y_N^*)] & = -\sum_{i=1}^N log[P(y_i^*)] &&\text{Because of the i.i.d assumption.}&\\
+\end{align} %]]></script>
+
+<p>If the target is 0, $ log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$<br />
+If the target is 1, $ log[P(y_i^*)] = t_i \cdot log[P(y_i)]$</p>
+
+<p>And it doesn’t hurt to add 0 term to make the formula more general,</p>
+
+<script type="math/tex; mode=display">P(y_i^*) = t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]</script>
+
+<p>So,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+-\sum_{i=1}^N log[P(y_i^*)] & = -\sum_{i=1}^N t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]\\
+ & = CE
+\end{align} %]]></script>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2018/04/12/cross-entropy-vs-maximum-likelihood/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -501,6 +601,8 @@ Your browser does not support the audio element.
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross entropy loss vs. max likelihood</a></li>
+                    
                         <li><a href="/2018/04/12/zhui-guang-zhe/">追光者</a></li>
                     
                         <li><a href="/2018/04/12/youtube/">Nice Youtube Video</a></li>
@@ -544,6 +646,15 @@ Your browser does not support the audio element.
                         <a href="/category/#MUSIC" class="categories-list-item" cate="MUSIC">
                             <span class="name">
                                 MUSIC
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#ML" class="categories-list-item" cate="ML">
+                            <span class="name">
+                                ML
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -614,6 +725,20 @@ Your browser does not support the audio element.
                       
                       
                       <a href="/tag/#MP3" style="font-size: 9pt; color: #999;">MP3</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Math" style="font-size: 9pt; color: #999;">Math</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Stats" style="font-size: 9pt; color: #999;">Stats</a>
                     
                 </div>
             </div>

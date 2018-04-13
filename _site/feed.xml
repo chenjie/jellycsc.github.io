@@ -5,9 +5,54 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Apr 2018 16:31:04 -0400</pubDate>
-    <lastBuildDate>Thu, 12 Apr 2018 16:31:04 -0400</lastBuildDate>
+    <pubDate>Thu, 12 Apr 2018 21:10:45 -0400</pubDate>
+    <lastBuildDate>Thu, 12 Apr 2018 21:10:45 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Cross entropy loss vs. max likelihood</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#quick-proof-of-binary-classification&quot; id=&quot;markdown-toc-quick-proof-of-binary-classification&quot;&gt;Quick proof of binary classification:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing &lt;strong&gt;log&lt;/strong&gt; likelihood function $\Rightarrow$ (toggles because of the minus sign) Minimizing &lt;strong&gt;negative&lt;/strong&gt; log likelihood function $\Rightarrow$ Minimizing cross entropy loss.
+
+&lt;h2 id=&quot;quick-proof-of-binary-classification&quot;&gt;Quick proof of binary classification:&lt;/h2&gt;
+Assume $y_1^* … y_N^*$ is a mini-batch of predictions generated (i.i.d) by your neural network. Each of them
+represents the probability of getting the correct prediction (i.e. matches the target). Assume the true targets are $t_1 … t_N$ where each of them is either 0 or 1.
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+-log[P(y_1^* ... y_N^*)] &amp; = -\sum_{i=1}^N log[P(y_i^*)] &amp;&amp;\text{Because of the i.i.d assumption.}&amp;\\
+\end{align} %]]&gt;&lt;/script&gt;
+
+If the target is 0, $ log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$&lt;br /&gt;
+If the target is 1, $ log[P(y_i^*)] = t_i \cdot log[P(y_i)]$
+
+And it doesn’t hurt to add 0 term to make the formula more general,
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(y_i^*) = t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]&lt;/script&gt;
+
+So,
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+-\sum_{i=1}^N log[P(y_i^*)] &amp; = -\sum_{i=1}^N t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]\\
+ &amp; = CE
+\end{align} %]]&gt;&lt;/script&gt;
+</description>
+        <pubDate>Thu, 12 Apr 2018 15:45:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/12/cross-entropy-vs-maximum-likelihood/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/12/cross-entropy-vs-maximum-likelihood/</guid>
+        
+        <category>Math</category>
+        
+        <category>Stats</category>
+        
+        
+        <category>ML</category>
+        
+      </item>
     
       <item>
         <title>追光者</title>
