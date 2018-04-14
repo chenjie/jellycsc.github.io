@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>深入理解LSTM记忆元网络</title>
-    <meta name="description" content="本文翻译源自Google Brain机器学习研究员colah的博客，原文链接请点击这里。">
+    <meta name="description" content="本文翻译源自Google Brain机器学习研究员colah的博客，原文链接请点击这里。此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明本文(https://jellycsc.github.io/2018/04/13/understandin...">
 
     <script src=" /js/jquery.min.js " charset="utf-8"></script>
 
@@ -250,7 +250,7 @@ window.addEventListener("orientationchange", function() {
   <li><a href="#rnn循环神经网络" id="markdown-toc-rnn循环神经网络">RNN循环神经网络</a></li>
   <li><a href="#长期long-term依赖的问题" id="markdown-toc-长期long-term依赖的问题">长期(Long-Term)依赖的问题</a></li>
   <li><a href="#lstm记忆元网络" id="markdown-toc-lstm记忆元网络">LSTM记忆元网络</a></li>
-  <li><a href="#lstm记忆元网络核心思想" id="markdown-toc-lstm记忆元网络核心思想">LSTM记忆元网络核心思想</a></li>
+  <li><a href="#lstm记忆元的核心思想" id="markdown-toc-lstm记忆元的核心思想">LSTM记忆元的核心思想</a></li>
   <li><a href="#一步一步了解lstm记忆元" id="markdown-toc-一步一步了解lstm记忆元">一步一步了解LSTM记忆元</a></li>
   <li><a href="#lstm记忆元的不同版本" id="markdown-toc-lstm记忆元的不同版本">LSTM记忆元的不同版本</a></li>
   <li><a href="#总结" id="markdown-toc-总结">总结</a></li>
@@ -259,6 +259,8 @@ window.addEventListener("orientationchange", function() {
 </ul>
 
 <p>本文翻译源自<a href="https://ai.google/brain-team/">Google Brain</a>机器学习研究员<a href="https://github.com/colah/">colah</a>的<a href="http://colah.github.io/">博客</a>，原文链接请点击<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">这里</a>。</p>
+
+<p>此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明本文(https://jellycsc.github.io/2018/04/13/understanding-lstm-networks/)以及原文(http://colah.github.io/posts/2015-08-Understanding-LSTMs/)，谢谢！</p>
 
 <h2 id="rnn循环神经网络">RNN循环神经网络</h2>
 <p>人们每一秒思考都是连续的，而并非从零开始。当你在读这篇文章的时候，你通过先前的词句来理解当前词语的含义。你读到一半不会扔掉前面所有获取到的文章信息而从头开始思考，这说明了你的思维是连贯的。</p>
@@ -334,7 +336,7 @@ window.addEventListener("orientationchange", function() {
 
 <p>黄色的矩形代表神经网络层。箭头汇合代表向量合并为多维矩阵，箭头分支表示数据流复制并流向不同路径。</p>
 
-<h2 id="lstm记忆元网络核心思想">LSTM记忆元网络核心思想</h2>
+<h2 id="lstm记忆元的核心思想">LSTM记忆元的核心思想</h2>
 <p>LSTM记忆元网络的关键是在每一个timestamp时LSTM记忆元的状态，也就是下图那条黑色加粗水平线。</p>
 
 <p>LSTM记忆元的状态有点像传送带[译者注：更加确切来说是一条工厂的流水线]，它将上一个timestamp时候的记忆元信息直接传递至下一个，期间仅作一些线性操作来对它加工处理[译者注：线性操作是指对原有LSTM记忆元信息改动不大，复杂度是线性的]。这对当前的信息而言，可以非常容易地“流”过去让原有信息保持不变。[译者注：在RNN中，信息能否保持同一性(identity)是非常重要的，同一性也就意味着在反向传播时，梯度不会消失或激增]</p>

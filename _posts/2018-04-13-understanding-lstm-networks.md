@@ -11,6 +11,8 @@ tags: RNN
 
 本文翻译源自[Google Brain](https://ai.google/brain-team/)机器学习研究员[colah](https://github.com/colah/)的[博客](http://colah.github.io/)，原文链接请点击[这里](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)。
 
+此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明本文(https://jellycsc.github.io/2018/04/13/understanding-lstm-networks/)以及原文(http://colah.github.io/posts/2015-08-Understanding-LSTMs/)，谢谢！
+
 
 
 
@@ -89,7 +91,7 @@ $$[译者注：(x_1, x_2) + (y_1, y_2) = (x_1 + y_1, x_2 + y_2)]$$
 
 黄色的矩形代表神经网络层。箭头汇合代表向量合并为多维矩阵，箭头分支表示数据流复制并流向不同路径。
 
-## LSTM记忆元网络核心思想
+## LSTM记忆元的核心思想
 LSTM记忆元网络的关键是在每一个timestamp时LSTM记忆元的状态，也就是下图那条黑色加粗水平线。
 
 LSTM记忆元的状态有点像传送带[译者注：更加确切来说是一条工厂的流水线]，它将上一个timestamp时候的记忆元信息直接传递至下一个，期间仅作一些线性操作来对它加工处理[译者注：线性操作是指对原有LSTM记忆元信息改动不大，复杂度是线性的]。这对当前的信息而言，可以非常容易地“流”过去让原有信息保持不变。[译者注：在RNN中，信息能否保持同一性(identity)是非常重要的，同一性也就意味着在反向传播时，梯度不会消失或激增]
