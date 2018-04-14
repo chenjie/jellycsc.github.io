@@ -106,7 +106,7 @@ LSTM记忆元的强大之处在于它能选择性删除或保留状态信息，�
 
 Sigmoid激活函数输出值在0到1之间，描述了信息能够通过的比例。0代表**没有**信息通过，1代表信息**完整地**通过。一个LSTM记忆元有三(3)个这种门，目的是为了保护和控制记忆元的状态。
 
--------------------未完待续-------------------
+-------------------↓未完待续↓-------------------
 ## 一步一步了解LSTM记忆元
 LSTM的第一步是决定什么信息将要从cell状态中丢掉。这一决定由sigmoid组成的“forget gate”来搞定，它输入ht−1和xt，输出与cell状态Ct−1同维度的0/1向量。
 
@@ -169,13 +169,14 @@ Written down as a set of equations, LSTMs look pretty intimidating. Hopefully, w
 LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: “Yes! There is a next step and it’s attention!” The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…
 
 Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer & Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
+-------------------↑未完待续↑-------------------
 
-## 感谢
-I’m grateful to a number of people for helping me better understand LSTMs, commenting on the visualizations, and providing feedback on this post.
+## 鸣谢
+我很感谢许多人，他们帮助我更好地理解LSTM，对上文中的可视化图片作出评论，并给予反馈。
 
-I’m very grateful to my colleagues at Google for their helpful feedback, especially Oriol Vinyals, Greg Corrado, Jon Shlens, Luke Vilnis, and Ilya Sutskever. I’m also thankful to many other friends and colleagues for taking the time to help me, including Dario Amodei, and Jacob Steinhardt. I’m especially thankful to Kyunghyun Cho for extremely thoughtful correspondence about my diagrams.
+我非常感谢我Google的同事提供的非常有帮助的反馈，尤其是[Oriol Vinyals](http://research.google.com/pubs/OriolVinyals.html)，[Greg Corrado](http://research.google.com/pubs/GregCorrado.html)，[Jon Shlens](http://research.google.com/pubs/JonathonShlens.html)，[Luke Vilnis](http://people.cs.umass.edu/~luke/)以及[Ilya Sutskever](http://www.cs.toronto.edu/~ilya/)。我也很感谢其他朋友和同事抽出他们的时间来帮助我，包括[Dario Amodei](https://www.linkedin.com/pub/dario-amodei/4/493/393)和[Jacob Steinhardt](http://cs.stanford.edu/~jsteinhardt/)。我特别感谢[Kyunghyun Cho](http://www.kyunghyuncho.me/)对我的图表极其缜密的交流和沟通。
 
-Before this post, I practiced explaining LSTMs during two seminar series I taught on neural networks. Thanks to everyone who participated in those for their patience with me, and for their feedback.
+在这发布篇文章之前，我曾两次在神经网络教学系列讲座中练习解释LSTM。感谢所有参与这些对我很耐心的人，并感谢他们的反馈。
 
 ## 注释
 1. 除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).

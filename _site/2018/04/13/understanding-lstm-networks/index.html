@@ -254,7 +254,7 @@ window.addEventListener("orientationchange", function() {
   <li><a href="#一步一步了解lstm记忆元" id="markdown-toc-一步一步了解lstm记忆元">一步一步了解LSTM记忆元</a></li>
   <li><a href="#lstm记忆元的不同版本" id="markdown-toc-lstm记忆元的不同版本">LSTM记忆元的不同版本</a></li>
   <li><a href="#总结" id="markdown-toc-总结">总结</a></li>
-  <li><a href="#感谢" id="markdown-toc-感谢">感谢</a></li>
+  <li><a href="#鸣谢" id="markdown-toc-鸣谢">鸣谢</a></li>
   <li><a href="#注释" id="markdown-toc-注释">注释</a></li>
 </ul>
 
@@ -351,7 +351,7 @@ window.addEventListener("orientationchange", function() {
 
 <p>Sigmoid激活函数输出值在0到1之间，描述了信息能够通过的比例。0代表<strong>没有</strong>信息通过，1代表信息<strong>完整地</strong>通过。一个LSTM记忆元有三(3)个这种门，目的是为了保护和控制记忆元的状态。</p>
 
-<p>——————-未完待续——————-</p>
+<p>——————-↓未完待续↓——————-</p>
 <h2 id="一步一步了解lstm记忆元">一步一步了解LSTM记忆元</h2>
 <p>LSTM的第一步是决定什么信息将要从cell状态中丢掉。这一决定由sigmoid组成的“forget gate”来搞定，它输入ht−1和xt，输出与cell状态Ct−1同维度的0/1向量。</p>
 
@@ -413,14 +413,15 @@ window.addEventListener("orientationchange", function() {
 
 <p>LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: “Yes! There is a next step and it’s attention!” The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…</p>
 
-<p>Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer &amp; Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!</p>
+<p>Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer &amp; Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
+——————-↑未完待续↑——————-</p>
 
-<h2 id="感谢">感谢</h2>
-<p>I’m grateful to a number of people for helping me better understand LSTMs, commenting on the visualizations, and providing feedback on this post.</p>
+<h2 id="鸣谢">鸣谢</h2>
+<p>我很感谢许多人，他们帮助我更好地理解LSTM，对上文中的可视化图片作出评论，并给予反馈。</p>
 
-<p>I’m very grateful to my colleagues at Google for their helpful feedback, especially Oriol Vinyals, Greg Corrado, Jon Shlens, Luke Vilnis, and Ilya Sutskever. I’m also thankful to many other friends and colleagues for taking the time to help me, including Dario Amodei, and Jacob Steinhardt. I’m especially thankful to Kyunghyun Cho for extremely thoughtful correspondence about my diagrams.</p>
+<p>我非常感谢我Google的同事提供的非常有帮助的反馈，尤其是<a href="http://research.google.com/pubs/OriolVinyals.html">Oriol Vinyals</a>，<a href="http://research.google.com/pubs/GregCorrado.html">Greg Corrado</a>，<a href="http://research.google.com/pubs/JonathonShlens.html">Jon Shlens</a>，<a href="http://people.cs.umass.edu/~luke/">Luke Vilnis</a>以及<a href="http://www.cs.toronto.edu/~ilya/">Ilya Sutskever</a>。我也很感谢其他朋友和同事抽出他们的时间来帮助我，包括<a href="https://www.linkedin.com/pub/dario-amodei/4/493/393">Dario Amodei</a>和<a href="http://cs.stanford.edu/~jsteinhardt/">Jacob Steinhardt</a>。我特别感谢<a href="http://www.kyunghyuncho.me/">Kyunghyun Cho</a>对我的图表极其缜密的交流和沟通。</p>
 
-<p>Before this post, I practiced explaining LSTMs during two seminar series I taught on neural networks. Thanks to everyone who participated in those for their patience with me, and for their feedback.</p>
+<p>在这发布篇文章之前，我曾两次在神经网络教学系列讲座中练习解释LSTM。感谢所有参与这些对我很耐心的人，并感谢他们的反馈。</p>
 
 <h2 id="注释">注释</h2>
 <ol>
