@@ -11,7 +11,7 @@ tags: RNN
 
 本文翻译源自[Google Brain](https://ai.google/brain-team/)机器学习研究员[colah](https://github.com/colah/)的[博客](http://colah.github.io/)，原文链接请点击[这里](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)。
 
-此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明本文(https://jellycsc.github.io/2018/04/13/understanding-lstm-networks/)以及原文(http://colah.github.io/posts/2015-08-Understanding-LSTMs/)，谢谢！
+此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明[此文](https://jellycsc.github.io/2018/04/13/understanding-lstm-networks/)以及[原文](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)，谢谢合作！
 
 
 
