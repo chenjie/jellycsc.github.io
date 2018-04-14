@@ -83,7 +83,7 @@ LSTM记忆元网络也有与标准RNN相似的链式结构，但是重复的模�
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM2-notation.png" width="80%"/> <br> </p>
 
-在上图中，每条线都代表一个多维向量，从一个节点的输出端流向其他节点的输入端。粉色的圆圈代表逐点计算(element-wise or point-wise operation)，比如向量的加法。[译者注：$(x_1, x_2) + (y_1, y_2) = (x_1 + y_1, x_2 + y_2)$]  
+在上图中，每条线都代表一个多维向量，从一个节点的输出端流向其他节点的输入端。粉色的圆圈代表逐点计算(element-wise or point-wise operation)，比如向量的加法。[译者注：$$(x_1, x_2) + (y_1, y_2) = (x_1 + y_1, x_2 + y_2)$$]  
 黄色的矩形代表神经网络层。箭头汇合代表向量合并为多维矩阵，箭头分支表示数据流复制并流向不同路径。
 
 ## LSTM记忆元网络核心思想
