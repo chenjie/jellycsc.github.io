@@ -385,32 +385,28 @@ window.addEventListener("orientationchange", function() {
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-o.png" width="90%" /> <br /> </p>
 
 <h2 id="lstm记忆元的不同版本">LSTM记忆元的不同版本</h2>
-<p>——————-↓未完待续↓——————-</p>
+<p>到目前为止介绍的是最最普通的LSTM记忆元结构，但并不是所有的LSTM记忆元都与上述的结构一模一样。事实上，基本每篇涉及到的LSTM记忆元的论文都会对其结构作轻微的改动。通常改动都很小，但有一些版本还是有必要在这里提一下。</p>
 
-<p>What I’ve described so far is a pretty normal LSTM. But not all LSTMs are the same as the above. In fact, it seems like almost every paper involving LSTMs uses a slightly different version. The differences are minor, but it’s worth mentioning some of them.</p>
-
-<p>One popular LSTM variant, introduced by Gers &amp; Schmidhuber (2000), is adding “peephole connections.” This means that we let the gate layers look at the cell state.</p>
+<p>一个非常流行的LSTM版本，是在<a href="/mdres/posts/2018/lstm/TimeCount-IJCNN2000.pdf">Gers &amp; Schmidhuber(2000)</a>的论文中提出的，加入了“窥视孔连接”(peephole connections)。这意味着每个“门”都能看到记忆元的状态。</p>
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-var-peepholes.png" width="90%" /> <br /> </p>
 
-<p>The above diagram adds peepholes to all the gates, but many papers will give some peepholes and not others.</p>
+<p>上图结构中，<strong>所有</strong>的“门”上都加入了窥视孔，但在许多论文中有些“门”加而有些“门”不加。</p>
 
-<p>Another variation is to use coupled forget and input gates. Instead of separately deciding what to forget and what we should add new information to, we make those decisions together. We only forget when we’re going to input something in its place. We only input new values to the state when we forget something older.</p>
+<p>另外一个变化是，将“忘记门”(forget gate)和“输入门”(input gate)组合在一起。这不同于先前<strong>单独</strong>地决定遗忘什么和<strong>单独</strong>地决定添加什么，现在将这两个决策组合起来。只有当某维度上有输入时，才忘掉该维度上旧的信息；只有当某维度上忘掉了旧的信息时，才将新输入的信息更新到该记忆元维度上。[译者注：这里再次参考了<a href="https://blog.csdn.net/yujianmin1990">lorderYu</a>在其<a href="https://blog.csdn.net/yujianmin1990/article/details/78826506">CSDN博客</a>中的翻译，感谢！]</p>
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-var-tied.png" width="90%" /> <br /> </p>
 
-<p>A slightly more dramatic variation on the LSTM is the Gated Recurrent Unit, or GRU, introduced by Cho, et al. (2014). It combines the forget and input gates into a single “update gate.” It also merges the cell state and hidden state, and makes some other changes. The resulting model is simpler than standard LSTM models, and has been growing increasingly popular.</p>
+<p>LSTM记忆元结构的一个戏剧性变化是GRU(Gated Recurrent Unit)，由<a href="/mdres/posts/2018/lstm/1406.1078v3.pdf">Cho, et al. (2014)</a>在这篇论文中提出。它将“忘记门”(forget gate)和“输入门”(input gate)混合成一个“更新门”(input gate)，并且将记忆元状态和隐状态合并了起来，还做了些其他的改变。GRU记忆元模型比传统LSTM记忆元在结构上更为简单，并且广受欢迎。</p>
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-var-GRU.png" width="90%" /> <br /> </p>
 
-<p>These are only a few of the most notable LSTM variants. There are lots of others, like Depth Gated RNNs by Yao, et al. (2015). There’s also some completely different approach to tackling long-term dependencies, like Clockwork RNNs by Koutnik, et al. (2014).</p>
+<p>上述这些只是一小部分LSTM记忆元结构的变化，其他的还有像<a href="/mdres/posts/2018/lstm/1508.03790v2.pdf">Yao, et al. (2015)</a>的Depth Gated RNNs. 还有一些运用了完全不同的方法来处理长期依赖问题，比如<a href="/mdres/posts/2018/lstm/1402.3511v1.pdf">Koutnik, et al. (2014)</a>的Clockwork RNNs.</p>
 
-<p>Which of these variants is best? Do the differences matter? Greff, et al. (2015) do a nice comparison of popular variants, finding that they’re all about the same. Jozefowicz, et al. (2015) tested more than ten thousand RNN architectures, finding some that worked better than LSTMs on certain tasks.</p>
-
-<p>——————-↑未完待续↑——————-</p>
+<p>哪<strong>一</strong>种是最好的呢？这些不同之处有影响吗？<a href="/mdres/posts/2018/lstm/1503.04069.pdf">Greff, et al(2015)</a>对这些流行的变化做了一个非常好的对比实验，发现他们基本都是一致的。<a href="/mdres/posts/2018/lstm/jozefowicz15.pdf">Jozefowicz, et al(2015)</a>测试了多达上万种RNN架构之后，发现了在处理某些任务中，RNN表现要比LSTM好一些。</p>
 
 <h2 id="总结">总结</h2>
 <p>在本文开始的时候，我提到了人们用RNN实现的显著成果，基本上所有这些都是使用LSTM实现的。对于大多数任务来说，LSTM比标准RNN确实更好！</p>
@@ -419,7 +415,7 @@ window.addEventListener("orientationchange", function() {
 
 <p>LSTMs是RNN成就的重大迈进，你可能很自然地就会问：还会有更大一步吗？研究人员们普遍认为：“会有的！下一步就是注意力(attention)机制！“这个想法是让RNN的每一步都从更多的信息中自己挑选信息。例如，如果你使用RNN来创建描述图像的标注，那么它可能会选取图像的一部分来查看并决定其输出的每个单词。事实上，这篇论文<a href="/mdres/posts/2018/lstm/1502.03044v2.pdf">Xu, et al. (2015)</a> 在做的就是这个 - 如果你想探索注意力机制，这或许是一个很好的起点！很多令人兴奋的结果都使用了注意力机制，而且似乎还有更多……</p>
 
-<p>注意力并不是RNN研究中唯一令人兴奋的线索，例如，这篇<a href="/mdres/posts/2018/lstm/1507.01526v1">Kalchbrenner, et al. (2015)</a>论文中的的Grid LSTMs似乎非常有前途。在生成模型中使用RNN的论文 - <a href="/mdres/posts/2018/lstm/1502.04623">Gregor, et al. (2015)</a>, <a href="/mdres/posts/2018/lstm/1506.02216v3">Chung, et al. (2015)</a>, or <a href="/mdres/posts/2018/lstm/1411.7610v3">Bayer &amp; Osendorfer (2015)</a> - 也都非常有趣。过去的几年(2015)对于循环神经网络来说是一个激动人心的时刻，而未来的那些只会更加令人瞩目！</p>
+<p>注意力并不是RNN研究中唯一令人兴奋的线索，例如，<a href="/mdres/posts/2018/lstm/1507.01526v1.pdf">Kalchbrenner, et al. (2015)</a>论文中的Grid LSTMs似乎非常有前途。在生成模型中使用RNN的论文 - <a href="/mdres/posts/2018/lstm/1502.04623.pdf">Gregor, et al. (2015)</a>, <a href="/mdres/posts/2018/lstm/1506.02216v3.pdf">Chung, et al. (2015)</a>，和<a href="/mdres/posts/2018/lstm/1411.7610v3.pdf">Bayer &amp; Osendorfer (2015)</a> - 也都非常有趣。过去的几年(2015)对于循环神经网络来说是一个激动人心的时刻，而未来的那些只会更加令人瞩目！</p>
 
 <h2 id="鸣谢">鸣谢</h2>
 <p>我很感谢许多人，他们帮助我更好地理解LSTM，对上文中的可视化图片作出评论，并给予反馈。</p>
