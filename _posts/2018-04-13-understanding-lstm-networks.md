@@ -116,31 +116,32 @@ LSTM记忆元的第一步是要决定从现有记忆元状态中扔掉什么信�
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-f.png" width="90%"/> <br> </p>
 
-下一步我们要决定储存哪些新的信息到记忆元状态中去。这个分为两部分，第一，由$Sigmoid$激活函数层组成的被称为是“输入门”(input gate)的东西决定哪些向量中的维度将要被更新；第二，由$tanh$激活函数层生成新的，可以被加入到记忆元状态中的候选向量$\tilde{C}_t$。然后，将这两个向量合并作逐点乘积，生成记忆元状态更新向量。
+下一步我们要决定储存哪些新的信息到记忆元状态中去。这个分为两部分，第一，由$Sigmoid$激活函数层组成的被称为是“输入门”(input gate)的东西决定哪些向量中的维度将要被更新[译者注：我这里把它称为更新量系数]；第二，由$tanh$激活函数层生成新的，可以被加入到记忆元状态中的候选向量$\tilde{C}_t$。然后，将这两个向量合并作逐点乘积，生成记忆元状态更新向量。
 
-继续之前语言模型的例子，我们会将新主语的性别(gender)信息增加[译者注：做逐点加法$+$]到记忆元状态中，以替换之前忘记的上一个主语的性别(gender)信息。
+对于之前语言模型的例子而言，我们会将新主语的性别(gender)信息增加[译者注：做逐点加法$+$]到记忆元状态中，以替换之前忘记的上一个主语的性别(gender)信息。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-i.png" width="90%"/> <br> </p>
 
--------------------↓未完待续↓-------------------
+现在，将旧的记忆元状态$C_{t−1}$更新为$C_t$，上面几步都已经说了我们要做的事情，我们现在就来实施一下。
 
-现在，将旧的cell状态Ct−1更细为Ct，上面几步已经给出了要做的事情。
+首先，我们将旧记忆元状态$C_{t−1}$乘以$f_t$，忘掉我们之前决定要遗忘掉的内容；然后，加上$i_t*\tilde{C}_t$，那是我们之前生成的候选向量乘以更新量系数。
 
-首先，将旧cell状态乘以ft，忘掉我们决定要遗忘掉的内容；然后，叠加it∗Ct~，那是我们决定要追加的更新内容。
-在语言预测模型的例子中，上述动作对应实际要丢弃的关于旧主题的性别信息，并增加新的信息。　
+对于之前语言模型的例子而言，这步操作对应实际丢弃旧主语的性别(gender)信息，并增加新的信息。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-C.png" width="90%"/> <br> </p>
 
-最后，我们需要决定输出什么，这个输出基于cell状态的，但是个过滤后的版本。先用sigmoid（“output gate”）决定cell状态的哪些部分是将要输出的，以及对应的输出比例；再用tanh将cell状态投射到[-1,1]之间；再将两者乘积得到我们想要输出的结果。
+最后，我们需要决定输出什么。这个输出是基于现在记忆元状态的，但还要经过过滤。先用$Sigmoid$激活函数层来决定输出记忆元状态的哪些部分[译者注：输出系数]；再用$tanh$把记忆元状态数值挤压进-1到1之间；再对两者作逐点乘积，最后这样就能只输出我们决定输出的结果了。
 
-对语言预测例子而言，当LSTM刚看到一个主题，它想输出动词相关的信息时，比如，它可能输出单数/复数形式的主题，所以需要知道什么类型的动词的格式应该被对应地加入后续要发生的动作中。　　
+对于之前语言模型的例子而言，因为LSTM刚看到一个主语，所以它想输出与决定后文动词形式相关的信息。比如，它可能会输出主语单/复数形式的信息，所以这样我们就能知道什么样的动词形式应该被对应地加入后续要发生的动作中去了。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-o.png" width="90%"/> <br> </p>
 
 ## LSTM记忆元的不同版本
+-------------------↓未完待续↓-------------------
+
 What I’ve described so far is a pretty normal LSTM. But not all LSTMs are the same as the above. In fact, it seems like almost every paper involving LSTMs uses a slightly different version. The differences are minor, but it’s worth mentioning some of them.
 
 One popular LSTM variant, introduced by Gers & Schmidhuber (2000), is adding “peephole connections.” This means that we let the gate layers look at the cell state.
