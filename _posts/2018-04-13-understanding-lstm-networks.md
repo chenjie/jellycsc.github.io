@@ -15,7 +15,7 @@ tags: RNN
 
 
 
-## 循环神经网络
+## RNN循环神经网络
 人们每一秒思考都是连续的，而并非从零开始。当你在读这篇文章的时候，你通过先前的词句来理解当前词语的含义。你读到一半不会扔掉前面所有获取到的文章信息而从头开始思考，这说明了你的思维是连贯的。
 
 传统的神经网络正因为不能做到这个，所以这也似乎是它的缺陷。举个例子，假如你想要用神经网络来将每一个电影的时间点所发生的事件分类，你不清楚传统的神经网络是如何将它对于之前事件的推理传递到之后的事件中去。
@@ -38,12 +38,12 @@ RNN链式结构的本质展现了它和序列(sequences & lists)是紧密相连�
 
 RNN其实就在我们身边，一直在被人们所使用着。近年来(2015)，RNN的应用在以下问题领域中取得了突出成就：语音识别(speech recognition)，语言建模(language modeling)，翻译(translation)，看图说话/图像标注(image captioning)等等，这个列表还在一直延续下去。在[Andrej Karpathy](https://cs.stanford.edu/people/karpathy/)的[这篇出色的博客](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)中论述了RNN非凡的功绩。
 
-RNN成功的关键就是LSTM(Long short-term memory)记忆元“们”，不计其数的LSTM记忆元组成了一个十分特别的循环神经网络，我(译者)将它称作为LSTM记忆元网络，它在很多任务中的表现比普通RNN更加强大，几乎所有令人瞩目的RNN成就的功臣都是它。接下来我们就对LSTM记忆元展开进一步探索。
+RNN成功的关键就是LSTM(Long short-term memory)记忆元“们”，不计其数的LSTM记忆元组成了一个十分特别的循环神经网络，我(译者)将它称作为LSTM记忆元网络，它在很多任务中的表现比标准RNN更加强大，几乎所有令人瞩目的RNN成就的功臣都是它。接下来我们就对LSTM记忆元展开进一步探索。
 
 ## 长期(Long-Term)依赖的问题
 RNN的吸引力之一在于这样一种将之前的信息用于当前判断/抉择的想法，就像视频是连贯的，先前的视频帧对于理解当前的视频画面有很大的帮助和提示。如果RNN也能做到这样，它们会变得非常有用。但是它们真的可以做到吗？还不一定。
 
-有时候我们只需要近(短)期的信息来完成当前的任务，就像在语言模型中预测下一个词语基于先前的一些词语。如果我们要尝试预测`The clouds are in the __.`这句话的最后一个词，我们不需要任何更多的上下文信息，答案很明显就应该是`sky`(因为云绝大多数情况下在天上)。在这种，答案就藏在前后几个词的情况下，普通RNN也能够学习训练用先前信息作出正确判断。
+有时候我们只需要近(短)期的信息来完成当前的任务，就像在语言模型中预测下一个词语基于先前的一些词语。如果我们要尝试预测`The clouds are in the __.`这句话的最后一个词，我们不需要任何更多的上下文信息，答案很明显就应该是`sky`(因为云绝大多数情况下在天上)。在这种，答案就藏在前后几个词的情况下，标准RNN也能够学习训练用先前信息作出正确判断。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/RNN-shorttermdepdencies.png" width="70%"/> <br>
@@ -51,13 +51,45 @@ RNN的吸引力之一在于这样一种将之前的信息用于当前判断/抉�
 
 但是绝大多数情况下答案不会藏在前后几个词中，我们需要更多的上下文信息来帮助作出准确的预测。这次如果我们要尝试预测`I grew up in France ..(此处省略一段话).. I speak fluent __.`这段话的最后一个词，首先我们可以通过前后词的信息来确定这应该是一门语言的名字，但是如果要具体到究竟是哪一门语言，我们就需要上文中(一段话之前的)`France`的信息。在我们日常的语言中，完全有可能出现像这样的相关信息`I grew up in France`，离预测位置`I speak fluent __.`很远的情况。
 
-很遗憾的是，当这个距离拉开的越来越大，普通RNN很难再通过训练学习来连接`相关信息`和`预测位置`的关系，从而就鲜有令人满意的预测了。
+很遗憾的是，当这个距离拉开的越来越大，标准RNN很难再通过训练学习来连接`相关信息`和`预测位置`的关系，从而就鲜有令人满意的预测了。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/RNN-longtermdependencies.png" width="90%"/> <br>
 <strong>长期(Long-Term)依赖的RNN模型</strong> </p>
 
+从理论上来说，标准RNN完全有能力处理长期依赖关系，但是现实中为了解决简单的问题，也需要人工精确地调整其参数，而RNN自己似乎无法将那些参数学习到。这个问题在以下两篇论文中都有深入的探讨：[Hochreiter (1991) [German]](/mdres/posts/2018/lstm/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf)，[Bengio, et al. (1994)](/mdres/posts/2018/lstm/tnn-94-gradient.pdf) 他们找到了一些关于这个问题如此困难的根本原因。
+
+幸好，LSTM没有这个问题。
+
+## LSTM记忆元网络
+LSTM记忆元网络(通常简称为`LSTMs`)是一种特别的RNN模型，它擅长捕捉学习长期的依赖关系。它是由[Hochreiter & Schmidhuber (1997)](/mdres/posts/2018/lstm/2604.pdf)提出的，并且在接下来的工作中被许多人提炼和推广<sup>1</sup>。LSTM记忆元结构在各种各样的问题上都获得了显著的成效，现在被广泛使用。
+
+LSTM设计之初是用来避免长期依赖问题的，长期地记忆信息是LSTM记忆元的缺省模式，并不是它们要刻意去学习的。
+
+所有RNN都具有神经网络的重复链式模组结构(重复代表它展开后每一个timestamp的结构都一模一样，链式代表它们之间相互连接传递信息，模组代表前面说的每一个timestamp的结构)，在标准的RNN模型中，这个重复的模组式结构具有非常简单的形态，比如只有一个$tanh$激活函数层：
+
+<p align="center"> <br>
+<img src="/mdres/posts/2018/lstm/LSTM3-SimpleRNN.png" width="90%"/> <br>
+<strong>标准RNN重复模组式结构中的$tanh$激活层</strong> </p>
+
+LSTM记忆元网络也有与标准RNN相似的链式结构，但是重复的模组式结构有不同的形态。它不是单单一层$tanh$，而是拥有四(4)个元素以特殊逻辑形式交互的复杂层。[译者注：这里参考了[lorderYu](https://blog.csdn.net/yujianmin1990)在其[CSDN博客](https://blog.csdn.net/yujianmin1990/article/details/78826506)中的翻译，用词非常精准，感谢！]
+
+<p align="center"> <br>
+<img src="/mdres/posts/2018/lstm/LSTM3-chain.png" width="90%"/> <br>
+<strong>一个LSTM记忆元是包括四(4)个元素以特殊逻辑形式交互的复杂层</strong> </p>
+
+不用担心图中的细节都表示什么，我们会一步一步讲解上图LSTM的含义。现在让我们先认识下需要使用的一些符号：
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM2-notation.png" width="80%"/> <br> </p>
+
+在上图中，每条线都代表一个多维向量，从一个节点的输出端流向其他节点的输入端。粉色的圆圈代表逐点计算(element-wise or point-wise operation)，比如向量的加法。[译者注：$(x_1, x_2) + (y_1, y_2) = (x_1 + y_1, x_2 + y_2)$]  
+黄色的矩形代表神经网络层。箭头汇合代表向量合并为多维矩阵，箭头分支表示数据流复制并流向不同路径。
 
 
+
+
+## 注释
+1. 除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).
 
 <img src="/mdres/loading.gif" width="20"/>持续更新中。。。

@@ -53,4 +53,16 @@
 <url>
 <loc>http://localhost:4000/page2/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/mdres/posts/2018/lstm/2604.pdf</loc>
+<lastmod>2018-04-13T20:50:11-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/mdres/posts/2018/lstm/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf</loc>
+<lastmod>2018-04-13T20:35:51-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/mdres/posts/2018/lstm/tnn-94-gradient.pdf</loc>
+<lastmod>2018-04-13T20:37:12-04:00</lastmod>
+</url>
 </urlset>
