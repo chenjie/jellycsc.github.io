@@ -106,14 +106,15 @@ LSTM记忆元的强大之处在于它能选择性删除或保留状态信息，�
 
 Sigmoid激活函数输出值在0到1之间，描述了信息能够通过的比例。0代表**没有**信息通过，1代表信息**完整地**通过。一个LSTM记忆元有三(3)个这种门，目的是为了保护和控制记忆元的状态。
 
--------------------↓未完待续↓-------------------
 ## 一步一步了解LSTM记忆元
-LSTM的第一步是决定什么信息将要从cell状态中丢掉。这一决定由sigmoid组成的“forget gate”来搞定，它输入ht−1和xt，输出与cell状态Ct−1同维度的0/1向量。
+LSTM记忆元的第一步是要决定从现有记忆元状态中扔掉什么信息，这一决定是由以Sigmoid激活函数层组成的“忘记门”(forget gate)来作出的，它的输入是$h_{t−1}$和$x_t$，输出是与记忆元状态向量$C_{t−1}$同维度的向量，向量中的每一个数字都介于0到1之间，再重复一下，1代表保留所有信息，0代表完全清除/忘却信息。[译者注：例如$f_t=(0.7,0.5,0.9)$]
 
-再回头想下前面的语言模型预测的例子，cell状态可能包含当前主题的性别，所以当前代称可以正确地判断出来。当看到一个新的主题时，我们想遗忘掉旧主题的性别信息。　　
+就举个之前语言模型的例子，我们的任务是基于之前的词语预测下一个词语。在这样的问题中，记忆元状态可能包含当前主语的性别[译者注：比如在德语中，每个名词都是有性别的，分为阴性feminine、阳性masculine、中性neuter]，为的是在后文中能正确使用代词[译者注：比如在德语中，指代主格，阴性为die、阳性为der、中性为das]。当我们看到一个新的主语时，我们就可以忘掉之前那个主语的性别(gender)信息。
 
 <p align="center">
 <img src="/mdres/posts/2018/lstm/LSTM3-focus-f.png" width="90%"/> <br> </p>
+
+-------------------↓未完待续↓-------------------
 
 下一步是决定哪些新信息要被存储到cell状态中。分两部分，第一，由sigmoid组成“input gate”决定哪些维度将要被更新；第二，由tanh生成心得可以被加入到cell状态中的候选值向量Ct~。然后，将这两个向量合并生成对cell状态更新的向量。
 
@@ -161,15 +162,16 @@ These are only a few of the most notable LSTM variants. There are lots of others
 
 Which of these variants is best? Do the differences matter? Greff, et al. (2015) do a nice comparison of popular variants, finding that they’re all about the same. Jozefowicz, et al. (2015) tested more than ten thousand RNN architectures, finding some that worked better than LSTMs on certain tasks.
 
-## 总结
-Earlier, I mentioned the remarkable results people are achieving with RNNs. Essentially all of these are achieved using LSTMs. They really work a lot better for most tasks!
-
-Written down as a set of equations, LSTMs look pretty intimidating. Hopefully, walking through them step by step in this essay has made them a bit more approachable.
-
-LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: “Yes! There is a next step and it’s attention!” The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…
-
-Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer & Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
 -------------------↑未完待续↑-------------------
+
+## 总结
+在本文开始的时候，我提到了人们用RNN实现的显著成果，基本上所有这些都是使用LSTM实现的。对于大多数任务来说，LSTM比标准RNN确实更好！
+
+上文中的一组组等式让LSTM看起来着实吓人，但希望你们在阅读完这篇文章后中，能对它有更加深刻的了解，觉得它们更加平易近人。
+
+LSTMs是RNN成就的重大迈进，你可能很自然地就会问：还会有更大一步吗？研究人员们普遍认为：“会有的！下一步就是注意力(attention)机制！“这个想法是让RNN的每一步都从更多的信息中自己挑选信息。例如，如果你使用RNN来创建描述图像的标注，那么它可能会选取图像的一部分来查看并决定其输出的每个单词。事实上，这篇论文[Xu, et al. (2015)](/mdres/posts/2018/lstm/1502.03044v2.pdf) 在做的就是这个 - 如果你想探索注意力机制，这或许是一个很好的起点！很多令人兴奋的结果都使用了注意力机制，而且似乎还有更多……
+
+注意力并不是RNN研究中唯一令人兴奋的线索，例如，这篇[Kalchbrenner, et al. (2015)](/mdres/posts/2018/lstm/1507.01526v1)论文中的的Grid LSTMs似乎非常有前途。在生成模型中使用RNN的论文 - [Gregor, et al. (2015)](/mdres/posts/2018/lstm/1502.04623), [Chung, et al. (2015)](/mdres/posts/2018/lstm/1506.02216v3), or [Bayer & Osendorfer (2015)](/mdres/posts/2018/lstm/1411.7610v3) - 也都非常有趣。过去的几年(2015)对于循环神经网络来说是一个激动人心的时刻，而未来的那些只会更加令人瞩目！
 
 ## 鸣谢
 我很感谢许多人，他们帮助我更好地理解LSTM，对上文中的可视化图片作出评论，并给予反馈。
