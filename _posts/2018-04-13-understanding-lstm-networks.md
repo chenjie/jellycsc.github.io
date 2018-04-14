@@ -86,8 +86,88 @@ LSTM记忆元网络也有与标准RNN相似的链式结构，但是重复的模�
 在上图中，每条线都代表一个多维向量，从一个节点的输出端流向其他节点的输入端。粉色的圆圈代表逐点计算(element-wise or point-wise operation)，比如向量的加法。[译者注：$(x_1, x_2) + (y_1, y_2) = (x_1 + y_1, x_2 + y_2)$]  
 黄色的矩形代表神经网络层。箭头汇合代表向量合并为多维矩阵，箭头分支表示数据流复制并流向不同路径。
 
+## LSTM记忆元网络核心思想
+LSTMs的关键是cell状态，那条在结构图上侧的水平线。cell状态有点像是传送带，在整个链中从头流到尾，只有很少线性操作插入进来。对信息而言，可以很容易地通过它无损地流通。
 
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-C-line.png" width="100%"/> <br> </p>
 
+LSTM通过称之为门的结构来控制将信息从cell状态中加入或者移除。门是种可选择地控制信息流通的方式，它们由sigmoid神经层和pointwise乘积操作组成。
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-gate.png" width="20%"/> <br> </p>
+
+sigmoid神经层输出介于0和1之间的值，描述了每个元素应该通过的比例。0意味着拒绝任何信息通过，1意味着让信息无损通过。一个LSMT有三个这种门，来保护和控制cell状态。
+
+## 一步一步了解LSTM记忆元
+LSTM的第一步是决定什么信息将要从cell状态中丢掉。这一决定由sigmoid组成的“forget gate”来搞定，它输入ht−1和xt，输出与cell状态Ct−1同维度的0/1向量。
+
+再回头想下前面的语言模型预测的例子，cell状态可能包含当前主题的性别，所以当前代称可以正确地判断出来。当看到一个新的主题时，我们想遗忘掉旧主题的性别信息。　　
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-focus-f.png" width="90%"/> <br> </p>
+
+下一步是决定哪些新信息要被存储到cell状态中。分两部分，第一，由sigmoid组成“input gate”决定哪些维度将要被更新；第二，由tanh生成心得可以被加入到cell状态中的候选值向量Ct~。然后，将这两个向量合并生成对cell状态更新的向量。
+
+在语言模型预测的那个例子中，我们将增加新主题的性别信息到cell状态中，以替换掉旧的性别信息（被忘掉的那个）。
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-focus-i.png" width="90%"/> <br> </p>
+
+现在，将旧的cell状态Ct−1更细为Ct，上面几步已经给出了要做的事情。
+
+首先，将旧cell状态乘以ft，忘掉我们决定要遗忘掉的内容；然后，叠加it∗Ct~，那是我们决定要追加的更新内容。
+在语言预测模型的例子中，上述动作对应实际要丢弃的关于旧主题的性别信息，并增加新的信息。　
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-focus-C.png" width="90%"/> <br> </p>
+
+最后，我们需要决定输出什么，这个输出基于cell状态的，但是个过滤后的版本。先用sigmoid（“output gate”）决定cell状态的哪些部分是将要输出的，以及对应的输出比例；再用tanh将cell状态投射到[-1,1]之间；再将两者乘积得到我们想要输出的结果。
+
+对语言预测例子而言，当LSTM刚看到一个主题，它想输出动词相关的信息时，比如，它可能输出单数/复数形式的主题，所以需要知道什么类型的动词的格式应该被对应地加入后续要发生的动作中。　　
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-focus-o.png" width="90%"/> <br> </p>
+
+## LSTM记忆元的不同版本
+What I’ve described so far is a pretty normal LSTM. But not all LSTMs are the same as the above. In fact, it seems like almost every paper involving LSTMs uses a slightly different version. The differences are minor, but it’s worth mentioning some of them.
+
+One popular LSTM variant, introduced by Gers & Schmidhuber (2000), is adding “peephole connections.” This means that we let the gate layers look at the cell state.
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-var-peepholes.png" width="90%"/> <br> </p>
+
+The above diagram adds peepholes to all the gates, but many papers will give some peepholes and not others.
+
+Another variation is to use coupled forget and input gates. Instead of separately deciding what to forget and what we should add new information to, we make those decisions together. We only forget when we’re going to input something in its place. We only input new values to the state when we forget something older.
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-var-tied.png" width="90%"/> <br> </p>
+
+A slightly more dramatic variation on the LSTM is the Gated Recurrent Unit, or GRU, introduced by Cho, et al. (2014). It combines the forget and input gates into a single “update gate.” It also merges the cell state and hidden state, and makes some other changes. The resulting model is simpler than standard LSTM models, and has been growing increasingly popular.
+
+<p align="center">
+<img src="/mdres/posts/2018/lstm/LSTM3-var-GRU.png" width="90%"/> <br> </p>
+
+These are only a few of the most notable LSTM variants. There are lots of others, like Depth Gated RNNs by Yao, et al. (2015). There’s also some completely different approach to tackling long-term dependencies, like Clockwork RNNs by Koutnik, et al. (2014).
+
+Which of these variants is best? Do the differences matter? Greff, et al. (2015) do a nice comparison of popular variants, finding that they’re all about the same. Jozefowicz, et al. (2015) tested more than ten thousand RNN architectures, finding some that worked better than LSTMs on certain tasks.
+
+## 总结
+Earlier, I mentioned the remarkable results people are achieving with RNNs. Essentially all of these are achieved using LSTMs. They really work a lot better for most tasks!
+
+Written down as a set of equations, LSTMs look pretty intimidating. Hopefully, walking through them step by step in this essay has made them a bit more approachable.
+
+LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: “Yes! There is a next step and it’s attention!” The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…
+
+Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer & Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
+
+## 感谢
+I’m grateful to a number of people for helping me better understand LSTMs, commenting on the visualizations, and providing feedback on this post.
+
+I’m very grateful to my colleagues at Google for their helpful feedback, especially Oriol Vinyals, Greg Corrado, Jon Shlens, Luke Vilnis, and Ilya Sutskever. I’m also thankful to many other friends and colleagues for taking the time to help me, including Dario Amodei, and Jacob Steinhardt. I’m especially thankful to Kyunghyun Cho for extremely thoughtful correspondence about my diagrams.
+
+Before this post, I practiced explaining LSTMs during two seminar series I taught on neural networks. Thanks to everyone who participated in those for their patience with me, and for their feedback.
 
 ## 注释
 1. 除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).
