@@ -3,7 +3,7 @@ layout: post
 title:  "DISQUS显示问题"
 date:   2018-04-11 13:03:00
 categories: TECH
-tags: Daily DISQUS
+tags: DISQUS Daily
 ---
 
 * content

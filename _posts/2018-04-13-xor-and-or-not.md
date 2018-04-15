@@ -3,7 +3,7 @@ layout: post
 title:  "XOR using NAND, AND, OR"
 date:   2018-04-13 14:12:00
 categories: ML
-tags: Logic
+tags: Logic Daily Feature
 ---
 
 * content

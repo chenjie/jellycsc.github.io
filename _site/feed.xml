@@ -5,9 +5,30 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Apr 2018 13:01:13 -0400</pubDate>
-    <lastBuildDate>Sun, 15 Apr 2018 13:01:13 -0400</lastBuildDate>
+    <pubDate>Sun, 15 Apr 2018 13:25:17 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Apr 2018 13:25:17 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Click and enlarge image</title>
+        <description>
+试试点击图片吧！Try it!
+
+&lt;a href=&quot;/mdres/collections/apple-touch-icon.png&quot; data-lightbox=&quot;2018-04-15&quot;&gt;
+&lt;img src=&quot;/mdres/collections/apple-touch-icon.png&quot; width=&quot;20%&quot; /&gt; &lt;/a&gt;
+</description>
+        <pubDate>Sun, 15 Apr 2018 09:23:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/15/click-and-enlarge-image/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/15/click-and-enlarge-image/</guid>
+        
+        <category>Daily</category>
+        
+        <category>Feature</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
     
       <item>
         <title>An example of using Autograd</title>
@@ -56,6 +77,10 @@ This is a quite interesting problem. It’s not difficult but requires some effo
         <guid isPermaLink="true">http://localhost:4000/2018/04/13/xor-and-or-not/</guid>
         
         <category>Logic</category>
+        
+        <category>Daily</category>
+        
+        <category>Feature</category>
         
         
         <category>ML</category>
@@ -108,6 +133,8 @@ So,
         
         <category>Stats</category>
         
+        <category>Feature</category>
+        
         
         <category>ML</category>
         
@@ -126,6 +153,8 @@ Your browser does not support the audio element.
         <guid isPermaLink="true">http://localhost:4000/2018/04/12/zhui-guang-zhe/</guid>
         
         <category>MP3</category>
+        
+        <category>Feature</category>
         
         
         <category>MUSIC</category>
@@ -164,6 +193,8 @@ Your browser does not support the audio element.
         
         <category>Daily</category>
         
+        <category>Feature</category>
+        
         
         <category>TECH</category>
         
@@ -182,6 +213,8 @@ Your browser does not support the audio element.
         
         <category>Cute</category>
         
+        <category>Feature</category>
+        
         
         <category>SUGAR</category>
         
@@ -198,9 +231,9 @@ Your browser does not support the audio element.
         <link>http://localhost:4000/2018/04/11/disqus-display-issue/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/04/11/disqus-display-issue/</guid>
         
-        <category>Daily</category>
-        
         <category>DISQUS</category>
+        
+        <category>Daily</category>
         
         
         <category>TECH</category>

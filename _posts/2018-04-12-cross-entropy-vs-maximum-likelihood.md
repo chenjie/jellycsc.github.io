@@ -3,7 +3,7 @@ layout: post
 title:  "Cross Entropy vs. Max likelihood"
 date:   2018-04-12 19:45:54
 categories: ML
-tags: Math Stats
+tags: Math Stats Feature
 ---
 
 * content
@@ -23,7 +23,7 @@ If the target is 0,
 
 $$ log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]$$
 
-If the target is 1, 
+If the target is 1,
 
 $$ log[P(y_i^*)] = t_i \cdot log[P(y_i)]$$
 
