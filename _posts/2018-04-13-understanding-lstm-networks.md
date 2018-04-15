@@ -25,7 +25,9 @@ tags: RNN
 循环神经网络([RNN](https://en.wikipedia.org/wiki/Recurrent_neural_network))解决了这个问题，他们在自身的网络中拥有循环结构，使得不同时间点(timestamp)的推理信息得以保存传递下来。
 
 <p align="center">
+<a href="/mdres/posts/2018/lstm/RNN-rolled.png" data-lightbox="image-1" data-title="带有循环结构的RNN模型">
 <img src="/mdres/posts/2018/lstm/RNN-rolled.png" width="20%"/> <br>
+</a>
 <strong>带有循环结构的RNN模型</strong> </p>
 
 在上图中，$A$代表任何神经网络(CNN, MLP...)，$X_t$代表在$t$时间点的输入，$h_t$代表在$t$时间点的输出。图中的循环结构让信息能够从RNN的一个时间点传递到之后的时间点去。

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/css/main.css ">
     <link rel="canonical" href="http://localhost:4000/2018/04/13/understanding-lstm-networks/">
     <link rel="alternate" type="application/rss+xml" title="JellyCSC" href="http://localhost:4000/feed.xml ">
+    <link rel="stylesheet" href="/css/lightbox.css ">
 
 
     <script>
@@ -270,7 +271,9 @@ window.addEventListener("orientationchange", function() {
 <p>循环神经网络(<a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">RNN</a>)解决了这个问题，他们在自身的网络中拥有循环结构，使得不同时间点(timestamp)的推理信息得以保存传递下来。</p>
 
 <p align="center">
+<a href="/mdres/posts/2018/lstm/RNN-rolled.png" data-lightbox="image-1" data-title="带有循环结构的RNN模型">
 <img src="/mdres/posts/2018/lstm/RNN-rolled.png" width="20%" /> <br />
+</a>
 <strong>带有循环结构的RNN模型</strong> </p>
 
 <p>在上图中，$A$代表任何神经网络(CNN, MLP…)，$X_t$代表在$t$时间点的输入，$h_t$代表在$t$时间点的输出。图中的循环结构让信息能够从RNN的一个时间点传递到之后的时间点去。</p>
@@ -411,7 +414,7 @@ window.addEventListener("orientationchange", function() {
 <h2 id="总结">总结</h2>
 <p>在本文开始的时候，我提到了人们用RNN实现的显著成果，基本上所有这些都是使用LSTM实现的。对于大多数任务来说，LSTM比标准RNN确实更好！</p>
 
-<p>上文中的一组组等式让LSTM看起来着实吓人，但希望你们在阅读完这篇文章后中，能对它有更加深刻的了解，觉得它们更加平易近人。</p>
+<p>上文中的一组组等式让LSTM看起来着实吓人，但希望你们在阅读完这篇文章后，能对它有更加深刻的了解，觉得它们更加平易近人。</p>
 
 <p>LSTMs是RNN成就的重大迈进，你可能很自然地就会问：还会有更大一步吗？研究人员们普遍认为：“会有的！下一步就是注意力(attention)机制！“这个想法是让RNN的每一步都从更多的信息中自己挑选信息。例如，如果你使用RNN来创建描述图像的标注，那么它可能会选取图像的一部分来查看并决定其输出的每个单词。事实上，这篇论文<a href="/mdres/posts/2018/lstm/1502.03044v2.pdf">Xu, et al. (2015)</a> 在做的就是这个 - 如果你想探索注意力机制，这或许是一个很好的起点！很多令人兴奋的结果都使用了注意力机制，而且似乎还有更多……</p>
 
@@ -639,6 +642,7 @@ window.addEventListener("orientationchange", function() {
       });
     </script>
     <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+    <script src=" /js/lightbox.js " charset="utf-8"></script>
   </body>
 
 </html>
