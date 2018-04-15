@@ -12,4 +12,4 @@ tags: Daily Feature
 试试点击图片吧！Try it!
 
 <a href="/mdres/collections/apple-touch-icon.png" data-lightbox="2018-04-15">
-<img src="/mdres/collections/apple-touch-icon.png" width="20%"/> </a>
+<img src="/mdres/collections/apple-touch-icon.png" width="30%"/> </a>
