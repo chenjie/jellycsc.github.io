@@ -9,7 +9,13 @@ type: page
 * content
 {:toc}
 
-这里会放一些有趣的机器学习论文，我有时间的话会写博客对他们部分（或全部）进行翻译深入理解。
+这里我会放一些有趣的机器学习论文，我有时间的话会写博客对Priority List中的论文部分（或全部）进行翻译深入理解。
+
+## Priority TODO List
+
+| Priority | Category | No. |
+|----------|----------|-----|
+|`null`|`null`|`null`|
 
 ## ResNet
 1. [The Reversible Residual Network: Backpropagation Without Storing Activations](/mdres/papers/1707.04585.pdf)
