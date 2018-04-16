@@ -87,22 +87,22 @@ Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0
 ## Tutorials
 * **Tutorial 1: Linear Regression** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-* **Tutorial 2: Classification** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 2: Classification** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut2.ipynb)]
 
-* **Tutorial 3: Backpropagation** [[Slides](/mdres/posts/2018/csc321/tut3_derivation.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 3: Backpropagation** [[Slides](/mdres/posts/2018/csc321/tut3_derivation.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut3.ipynb)]
 
-* **Tutorial 4: Autograd** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 4: Autograd** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut4.ipynb)]
 
-* **Tutorial 5: PyTorch** [IPython Notebooks: [1](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [2](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [3](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [4](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 5: PyTorch** [IPython Notebooks: [1](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut5a.ipynb), [2](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut5b.ipynb), [3](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut5c.ipynb), [4](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut5d.ipynb)]
 
-* **Tutorial 6: Conv Nets** [[Slides](/mdres/posts/2018/csc321/tut6_slides.pdf)] [IPython Notebooks: [MNIST](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [CIFAR-10](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 6: Conv Nets** [[Slides](/mdres/posts/2018/csc321/tut6_slides.pdf)] [IPython Notebooks: [MNIST](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut6_mnist.ipynb), [CIFAR-10](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut6_cifar.ipynb)]
 
 * **Tutorial 7: Midterm Review**
 
-* **Tutorial 8: Attention and Maximum Likelihood** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 8: Attention and Maximum Likelihood** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut8_complete.ipynb)]
 
-* **Tutorial 9: GANs** [IPython Notebooks: [GAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [DCGAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 9: GANs** [IPython Notebooks: [GAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut9_GAN.ipynb), [DCGAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut9_DCGAN.ipynb)]
 
-* **Tutorial 10: Policy Gradient** [[Slides](/mdres/posts/2018/csc321/tut10_slides.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 10: Policy Gradient** [[Slides](/mdres/posts/2018/csc321/tut10_slides.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut10_code.ipynb)]
 
 <img src="/mdres/loading.gif" width="20"/>持续更新中。。。
