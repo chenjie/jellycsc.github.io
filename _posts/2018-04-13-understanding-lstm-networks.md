@@ -212,4 +212,4 @@ LSTMs是RNN成就的重大迈进，你可能很自然地就会问：还会有更
 ## 注释
 1. 除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).
 
-<img src="/mdres/loading.gif" width="20"/>持续更新中。。。
+<!-- <img src="/mdres/loading.gif" width="20"/>持续更新中。。。 -->
