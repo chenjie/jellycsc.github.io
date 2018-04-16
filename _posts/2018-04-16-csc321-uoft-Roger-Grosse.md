@@ -85,44 +85,24 @@ Reinforcement learning好的学习资料：[UCL Course on RL taught by David Sil
 Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0
 
 ## Tutorials
-* **Tutorial 1: Linear Regression** [[IPython Notebook](https://nbviewer.jupyter.org/urls/jellycsc.github.io/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 1: Linear Regression** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-<!-- Tutorial 2: Classification [PDF] [IPython Notebook]
+* **Tutorial 2: Classification** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Afternoon: 1/18, 2-3pm; Night: 1/16, 8-9pm
+* **Tutorial 3: Backpropagation** [[Slides](/mdres/posts/2018/csc321/tut3_derivation.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Tutorial 3: Backpropagation [IPython Notebook] [Derivation (PDF)]
+* **Tutorial 4: Autograd** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Afternoon: 1/25, 2-3pm; Night: 1/23, 8-9pm
+* **Tutorial 5: PyTorch** [IPython Notebooks: [1](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [2](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [3](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [4](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Tutorial 4: Autograd [IPython Notebook]
+* **Tutorial 6: Conv Nets** [[Slides](/mdres/posts/2018/csc321/tut6_slides.pdf)] [IPython Notebooks: [MNIST](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [CIFAR-10](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Afternoon: 2/1, 2-3pm; Night: 1/30, 8-9pm
+* **Tutorial 7: Midterm Review**
 
-Tutorial 5: PyTorch [IPython Notebooks: 1, 2, 3, 4]]
+* **Tutorial 8: Attention and Maximum Likelihood** [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Afternoon: 2/8, 2-3pm; Night: 2/6, 8-9pm
+* **Tutorial 9: GANs** [IPython Notebooks: [GAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb), [DCGAN](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
-Tutorial 6: Conv Nets [Slides] [IPython Notebooks: MNIST, CIFAR-10]
-
-Afternoon: 2/15, 2-3pm; Night: 2/13, 8-9pm
-
-Tutorial 7: Midterm Review
-
-Afternoon: 3/1, 2-3pm; Night: 2/27, 8-9pm
-
-This tutorial will effectively be extra office hours. But if there are recurring questions, or solutions to past exams you'd like to see gone over, we can discuss those as a class. Tutorial will be held in the main lecture hall.
-
-Tutorial 8: Attention and Maximum Likelihood [starter code and data, solution]
-
-Afternoon: 3/15, 2-3pm; Night: 3/13, 8-9pm
-
-Tutorial 9: GANs [GAN, DCGAN (incomplete), DCGAN]
-
-Afternoon: 3/22, 2-3pm; Night: 3/20, 8-9pm
-
-Tutorial 10: Policy Gradient [slides, IPython Notebook]
-
-Afternoon: 3/29, 2-3pm; Night: 3/27, 8-9pm -->
+* **Tutorial 10: Policy Gradient** [[Slides](/mdres/posts/2018/csc321/tut10_slides.pdf)] [[IPython Notebook](http://nbviewer.jupyter.org/github/jellycsc/jellycsc.github.io/blob/master/mdres/posts/2018/csc321/tut1.ipynb)]
 
 <img src="/mdres/loading.gif" width="20"/>持续更新中。。。
