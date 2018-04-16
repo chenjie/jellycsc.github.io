@@ -85,7 +85,7 @@ Reinforcement learning好的学习资料：[UCL Course on RL taught by David Sil
 Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0
 
 ## Tutorials
-* Tutorial 1: Linear Regression [[IPython Notebook](https://nbviewer.jupyter.org/urls/jellycsc.github.io/mdres/posts/2018/csc321/tut1.ipynb)]
+* **Tutorial 1: Linear Regression** [[IPython Notebook](https://nbviewer.jupyter.org/urls/jellycsc.github.io/mdres/posts/2018/csc321/tut1.ipynb)]
 
 <!-- Tutorial 2: Classification [PDF] [IPython Notebook]
 
