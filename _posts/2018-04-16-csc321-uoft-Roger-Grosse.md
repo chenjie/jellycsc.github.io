@@ -15,6 +15,14 @@ tags: MLP CNN RNN GAN
 
 
 
+## Instructor
+<p align="center">
+<img src="http://www.cs.toronto.edu/~rgrosse/photo.png" width="30%"/>
+<br> <strong><a href="http://www.cs.toronto.edu/~rgrosse/">Roger Grosse</a></strong> </p>
+
+## Course Webpage (2018)
+http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/
+
 ## Lectures
 * **Lecture 1: Introduction** [[Slides](/mdres/posts/2018/csc321/lec01.pdf)] [[Lecture Notes](/mdres/posts/2018/csc321/L01 Introduction.pdf)]  
 What are machine learning and neural networks, and what would you use them for? Supervised, unsupervised, and reinforcement learning. How this course is organized.
