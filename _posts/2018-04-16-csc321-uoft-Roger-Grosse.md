@@ -82,7 +82,7 @@ Maximum likelihood estimation. Optional: basics of Bayesian parameter estimation
 
 * **Lecture 19: Generative Adversarial Networks** [[Slides](/mdres/posts/2018/csc321/lec19.pdf)] [[Lecture Notes](/mdres/posts/2018/csc321/L19 GANs.pdf)]
 
-* **Lecture 20: Autoregressive and Reversible Models** [[Slides](/mdres/posts/2018/csc321/lec20.pdf)]
+* **Lecture 20: Autoregressive and Reversible Models** [[Slides](/mdres/posts/2018/csc321/lec20.pdf)] [[Lecture Notes](/mdres/posts/2018/csc321/L20 Reversible and Autoregressive Models.pdf)]
 
 * **Lecture 21: Policy Gradient** [[Slides](/mdres/posts/2018/csc321/lec21.pdf)]
 
