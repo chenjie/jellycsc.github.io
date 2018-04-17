@@ -17,7 +17,7 @@ tags: MLP CNN RNN GAN
 
 ## Instructor
 <p align="center">
-<img src="http://www.cs.toronto.edu/~rgrosse/photo.png" width="30%"/>
+<img src="http://www.cs.toronto.edu/~rgrosse/photo.png" width="50%"/>
 <br> <strong><a href="http://www.cs.toronto.edu/~rgrosse/">Roger Grosse</a></strong> </p>
 
 ## Course Webpage (2018)
