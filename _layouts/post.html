@@ -100,5 +100,12 @@ layout: default
         aTags[i].setAttribute('target', '_blank')
     }
 }());
+(function() {
+    var bTags = document.querySelectorAll('a.note')
+    for (var i = 0; i < bTags.length; i++) {
+        bTags[i].setAttribute('target', '_self')
+        bTags[i].setAttribute('data-scroll','')
+    }
+}());
 </script>
 <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

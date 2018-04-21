@@ -326,7 +326,7 @@ window.addEventListener("orientationchange", function() {
 <p>幸好，LSTM没有这个问题。</p>
 
 <h2 id="lstm记忆元网络">LSTM记忆元网络</h2>
-<p>LSTM记忆元网络(通常简称为<code class="highlighter-rouge">LSTMs</code>)是一种特别的RNN模型，它擅长捕捉学习长期的依赖关系。它是由<a href="/mdres/posts/2018/lstm/2604.pdf">Hochreiter &amp; Schmidhuber (1997)</a>提出的，并且在接下来的工作中被许多人提炼和推广<sup>1</sup>。LSTM记忆元结构在各种各样的问题上都获得了显著的成效，现在被广泛使用。</p>
+<p>LSTM记忆元网络(通常简称为<code class="highlighter-rouge">LSTMs</code>)是一种特别的RNN模型，它擅长捕捉学习长期的依赖关系。它是由<a href="/mdres/posts/2018/lstm/2604.pdf">Hochreiter &amp; Schmidhuber (1997)</a>提出的，并且在接下来的工作中被许多人提炼和推广<sup><a class="note" href="#注释">[1]</a></sup>。LSTM记忆元结构在各种各样的问题上都获得了显著的成效，现在被广泛使用。</p>
 
 <p>LSTM设计之初是用来避免长期依赖问题的，长期地记忆信息是LSTM记忆元的缺省模式，并不是它们要刻意去学习的。</p>
 
@@ -467,7 +467,7 @@ window.addEventListener("orientationchange", function() {
 
 <h2 id="注释">注释</h2>
 <ol>
-  <li>除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and <a href="https://scholar.google.com/citations?user=DaFHynwAAAAJ&amp;hl=en">Alex Graves</a>.</li>
+  <li><a name="note1"></a>除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and <a href="https://scholar.google.com/citations?user=DaFHynwAAAAJ&amp;hl=en">Alex Graves</a>.</li>
 </ol>
 
 <!-- <img src="/mdres/loading.gif" width="20"/>持续更新中。。。 -->
@@ -476,6 +476,13 @@ window.addEventListener("orientationchange", function() {
         <hr>
 
         
+        
+            
+            
+                
+                    
+                
+            
         
             
             
@@ -604,21 +611,6 @@ window.addEventListener("orientationchange", function() {
                 
             
         
-            
-            
-                
-                    
-                
-            
-                
-                    
-                
-            
-                
-                    
-                
-            
-        
         
             </ul>
         
@@ -698,6 +690,13 @@ window.addEventListener("orientationchange", function() {
     var aTags = document.querySelectorAll('article a:not([id])')
     for (var i = 0; i < aTags.length; i++) {
         aTags[i].setAttribute('target', '_blank')
+    }
+}());
+(function() {
+    var bTags = document.querySelectorAll('a.note')
+    for (var i = 0; i < bTags.length; i++) {
+        bTags[i].setAttribute('target', '_self')
+        bTags[i].setAttribute('data-scroll','')
     }
 }());
 </script>

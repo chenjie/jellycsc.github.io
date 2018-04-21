@@ -277,8 +277,8 @@ window.addEventListener("orientationchange", function() {
 
 <h2 id="instructor">Instructor</h2>
 <p align="center">
-<img src="http://www.cs.toronto.edu/~rgrosse/photo.png" width="50%" />
-<br /> <strong><a href="http://www.cs.toronto.edu/~rgrosse/">Roger Grosse</a></strong> </p>
+<img src="https://www.cs.toronto.edu/~rgrosse/photo.png" width="50%" />
+<br /> <strong><a href="https://www.cs.toronto.edu/~rgrosse/">Roger Grosse</a></strong> </p>
 
 <h2 id="course-webpage-2018">Course Webpage (2018)</h2>
 <p>http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/</p>
@@ -363,7 +363,7 @@ Maximum likelihood estimation. Optional: basics of Bayesian parameter estimation
     <p><strong>Lecture 19: Generative Adversarial Networks</strong> [<a href="/mdres/posts/2018/csc321/lec19.pdf">Slides</a>] [<a href="/mdres/posts/2018/csc321/L19 GANs.pdf">Lecture Notes</a>]</p>
   </li>
   <li>
-    <p><strong>Lecture 20: Autoregressive and Reversible Models</strong> [<a href="/mdres/posts/2018/csc321/lec20.pdf">Slides</a>]</p>
+    <p><strong>Lecture 20: Autoregressive and Reversible Models</strong> [<a href="/mdres/posts/2018/csc321/lec20.pdf">Slides</a>] [<a href="/mdres/posts/2018/csc321/L20 Reversible and Autoregressive Models.pdf">Lecture Notes</a>]</p>
   </li>
   <li>
     <p><strong>Lecture 21: Policy Gradient</strong> [<a href="/mdres/posts/2018/csc321/lec21.pdf">Slides</a>]</p>
@@ -418,6 +418,19 @@ Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0</p>
         <hr>
 
         
+        
+            
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
         
             
             
@@ -648,39 +661,6 @@ Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0</p>
                 
             
         
-            
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-        
         
             </ul>
         
@@ -692,6 +672,8 @@ Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0</p>
         
     </div>
     <div class="nex">
+        
+        <p><span>&#9998;</span><strong>下一篇咯: </strong> <a href="/2018/04/18/essential-linux-binaries/">Essential Linux Binaries</a></p>
         
     </div>
 </div>
@@ -758,6 +740,13 @@ Youtube视频: https://www.youtube.com/watch?v=2pWv7GOvuf0</p>
     var aTags = document.querySelectorAll('article a:not([id])')
     for (var i = 0; i < aTags.length; i++) {
         aTags[i].setAttribute('target', '_blank')
+    }
+}());
+(function() {
+    var bTags = document.querySelectorAll('a.note')
+    for (var i = 0; i < bTags.length; i++) {
+        bTags[i].setAttribute('target', '_self')
+        bTags[i].setAttribute('data-scroll','')
     }
 }());
 </script>

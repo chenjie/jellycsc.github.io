@@ -283,6 +283,15 @@ window.addEventListener("orientationchange", function() {
                     
                 
             
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
                 
                     
                 
@@ -458,36 +467,6 @@ window.addEventListener("orientationchange", function() {
                 
             
         
-            
-            
-                
-                    
-                
-                    
-                        
-                        <li class="relatedPost">
-                            <a href="/2018/04/10/my-first-post/">我的第一篇日志！
-                            
-                            </a>
-                        </li>
-                        
-                        
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-        
         
             </ul>
         
@@ -567,6 +546,13 @@ window.addEventListener("orientationchange", function() {
     var aTags = document.querySelectorAll('article a:not([id])')
     for (var i = 0; i < aTags.length; i++) {
         aTags[i].setAttribute('target', '_blank')
+    }
+}());
+(function() {
+    var bTags = document.querySelectorAll('a.note')
+    for (var i = 0; i < bTags.length; i++) {
+        bTags[i].setAttribute('target', '_self')
+        bTags[i].setAttribute('data-scroll','')
     }
 }());
 </script>

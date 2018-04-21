@@ -211,6 +211,67 @@ window.addEventListener("orientationchange", function() {
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2018/04/18/essential-linux-binaries/">Essential Linux Binaries</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-04-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Linux" title="Category: Linux" rel="category">Linux</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Tutorial" title="Tag: Tutorial" rel="tag">Tutorial</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>我自从大一开始接触Linux至今已经有三个年头了，对Linux里面的命令或多或少都有些了解，但是每当我想用Terminal真正着手做些什么时，总需要回去翻翻StackOverflow. 归根结底是我对常用命令还不够熟悉，所以我就想在这篇文章里对常用Linux命令做一个总结，这既可以算作是给新手的入门介绍，也可以作为自己以后的参考。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2018/04/18/essential-linux-binaries/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2018/04/16/csc321-uoft-Roger-Grosse/">CSC321严谨的ML入门课程</a>
                 </h2>
                 <div class="label">
@@ -530,103 +591,6 @@ window.addEventListener("orientationchange", function() {
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2018/04/12/cross-entropy-vs-maximum-likelihood/">Cross Entropy vs. Max likelihood</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2018-04-12
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#ML" title="Category: ML" rel="category">ML</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Math" title="Tag: Math" rel="tag">Math</a>&nbsp;
-    
-        <a href="/tag/#Stats" title="Tag: Stats" rel="tag">Stats</a>&nbsp;
-    
-        <a href="/tag/#Feature" title="Tag: Feature" rel="tag">Feature</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#quick-proof-of-binary-classification" id="markdown-toc-quick-proof-of-binary-classification">Quick proof of binary classification:</a></li>
-</ul>
-
-<p>Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing <strong>log</strong> likelihood function $\Rightarrow$ (toggles because of the minus sign) Minimizing <strong>negative</strong> log likelihood function $\Rightarrow$ Minimizing cross entropy loss.</p>
-
-<h2 id="quick-proof-of-binary-classification">Quick proof of binary classification:</h2>
-<p>Assume $y_1^* … y_N^*$ is a mini-batch of predictions generated (i.i.d) by your neural network. Each of them
-represents the probability of getting the correct prediction (i.e. matches the target). Assume the true targets are $t_1 … t_N$ where each of them is either 0 or 1.</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
--log[P(y_1^* ... y_N^*)] & = -\sum_{i=1}^N log[P(y_i^*)] &&\text{Because of the i.i.d assumption.}&\\
-\end{align} %]]></script>
-
-<p>If the target is 0,</p>
-
-<script type="math/tex; mode=display">log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]</script>
-
-<p>If the target is 1,</p>
-
-<script type="math/tex; mode=display">log[P(y_i^*)] = t_i \cdot log[P(y_i)]</script>
-
-<p>And it doesn’t hurt to add 0 term to make the formula more general,</p>
-
-<script type="math/tex; mode=display">P(y_i^*) = t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]</script>
-
-<p>So,</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
--\sum_{i=1}^N log[P(y_i^*)] & = -\sum_{i=1}^N t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]\\
- & = CE
-\end{align} %]]></script>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2018/04/12/cross-entropy-vs-maximum-likelihood/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -654,6 +618,8 @@ represents the probability of getting the correct prediction (i.e. matches the t
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2018/04/18/essential-linux-binaries/">Essential Linux Binaries</a></li>
+                    
                         <li><a href="/2018/04/16/csc321-uoft-Roger-Grosse/">CSC321严谨的ML入门课程</a></li>
                     
                         <li><a href="/2018/04/15/click-and-enlarge-image/">Click and enlarge image</a></li>
@@ -671,8 +637,6 @@ represents the probability of getting the correct prediction (i.e. matches the t
                         <li><a href="/2018/04/12/youtube/">Nice Youtube Video</a></li>
                     
                         <li><a href="/2018/04/11/cute-bot/">Cute BB-8</a></li>
-                    
-                        <li><a href="/2018/04/11/disqus-display-issue/">DISQUS显示问题</a></li>
                     
                 </ul>
             </div>
@@ -718,6 +682,15 @@ represents the probability of getting the correct prediction (i.e. matches the t
                                 ML
                             </span>
                             <span class="badge">5</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#Linux" class="categories-list-item" cate="Linux">
+                            <span class="name">
+                                Linux
+                            </span>
+                            <span class="badge">1</span>
                         </a>
                     </li>
                     
@@ -849,6 +822,13 @@ represents the probability of getting the correct prediction (i.e. matches the t
                       
                       
                       <a href="/tag/#GAN" style="font-size: 9pt; color: #999;">GAN</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Tutorial" style="font-size: 9pt; color: #999;">Tutorial</a>
                     
                 </div>
             </div>

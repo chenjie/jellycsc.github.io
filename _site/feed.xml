@@ -5,9 +5,26 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Apr 2018 20:41:53 -0400</pubDate>
-    <lastBuildDate>Mon, 16 Apr 2018 20:41:53 -0400</lastBuildDate>
+    <pubDate>Sat, 21 Apr 2018 14:30:32 -0400</pubDate>
+    <lastBuildDate>Sat, 21 Apr 2018 14:30:32 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Essential Linux Binaries</title>
+        <description>
+我自从大一开始接触Linux至今已经有三个年头了，对Linux里面的命令或多或少都有些了解，但是每当我想用Terminal真正着手做些什么时，总需要回去翻翻StackOverflow. 归根结底是我对常用命令还不够熟悉，所以我就想在这篇文章里对常用Linux命令做一个总结，这既可以算作是给新手的入门介绍，也可以作为自己以后的参考。
+
+</description>
+        <pubDate>Wed, 18 Apr 2018 11:17:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/18/essential-linux-binaries/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/18/essential-linux-binaries/</guid>
+        
+        <category>Tutorial</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>CSC321严谨的ML入门课程</title>
@@ -240,26 +257,6 @@ Your browser does not support the audio element.
         
         
         <category>SUGAR</category>
-        
-      </item>
-    
-      <item>
-        <title>DISQUS显示问题</title>
-        <description>
-今早我发现Chrome浏览时评论区显示有背景颜色不协调的问题↓&lt;br /&gt;
-&lt;img src=&quot;/mdres/posts/2018/discus_display_issue.png&quot; alt=&quot;DISQUS&quot; /&gt;
-
-</description>
-        <pubDate>Wed, 11 Apr 2018 09:03:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/11/disqus-display-issue/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/11/disqus-display-issue/</guid>
-        
-        <category>DISQUS</category>
-        
-        <category>Daily</category>
-        
-        
-        <category>TECH</category>
         
       </item>
     

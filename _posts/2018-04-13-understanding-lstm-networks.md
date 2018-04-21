@@ -70,7 +70,7 @@ RNN的吸引力之一在于这样一种将之前的信息用于当前判断/抉�
 幸好，LSTM没有这个问题。
 
 ## LSTM记忆元网络
-LSTM记忆元网络(通常简称为`LSTMs`)是一种特别的RNN模型，它擅长捕捉学习长期的依赖关系。它是由[Hochreiter & Schmidhuber (1997)](/mdres/posts/2018/lstm/2604.pdf)提出的，并且在接下来的工作中被许多人提炼和推广<sup>1</sup>。LSTM记忆元结构在各种各样的问题上都获得了显著的成效，现在被广泛使用。
+LSTM记忆元网络(通常简称为`LSTMs`)是一种特别的RNN模型，它擅长捕捉学习长期的依赖关系。它是由[Hochreiter & Schmidhuber (1997)](/mdres/posts/2018/lstm/2604.pdf)提出的，并且在接下来的工作中被许多人提炼和推广<sup><a class="note" href="#注释">[1]</a></sup>。LSTM记忆元结构在各种各样的问题上都获得了显著的成效，现在被广泛使用。
 
 LSTM设计之初是用来避免长期依赖问题的，长期地记忆信息是LSTM记忆元的缺省模式，并不是它们要刻意去学习的。
 
@@ -210,6 +210,6 @@ LSTMs是RNN成就的重大迈进，你可能很自然地就会问：还会有更
 在这发布篇文章之前，我曾两次在神经网络教学系列讲座中练习解释LSTM。感谢所有参与这些对我很耐心的人，并感谢他们的反馈。
 
 ## 注释
-1. 除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).
+1. <a name="note1"></a>除了原作者以外，还有很多人为现代LSTM做出了贡献。以下是一份不完全名单：Felix Gers, Fred Cummins, Santiago Fernandez, Justin Bayer, Daan Wierstra, Julian Togelius, Faustino Gomez, Matteo Gagliolo, and [Alex Graves](https://scholar.google.com/citations?user=DaFHynwAAAAJ&hl=en).
 
 <!-- <img src="/mdres/loading.gif" width="20"/>持续更新中。。。 -->
