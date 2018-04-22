@@ -5,9 +5,26 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Apr 2018 14:30:32 -0400</pubDate>
-    <lastBuildDate>Sat, 21 Apr 2018 14:30:32 -0400</lastBuildDate>
+    <pubDate>Sun, 22 Apr 2018 19:05:20 -0400</pubDate>
+    <lastBuildDate>Sun, 22 Apr 2018 19:05:20 -0400</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>卷积神经网络输出大小公式</title>
+        <description>
+今天我来说说一个很有用的公式，参考 Stanford CS231n 课程笔记。[&lt;a href=&quot;http://cs231n.github.io/convolutional-networks/#conv&quot;&gt;Link&lt;/a&gt;]
+
+</description>
+        <pubDate>Sun, 22 Apr 2018 14:33:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/22/convnet-kernel-size/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/22/convnet-kernel-size/</guid>
+        
+        <category>CNN</category>
+        
+        
+        <category>ML</category>
+        
+      </item>
     
       <item>
         <title>Essential Linux Binaries</title>
@@ -237,26 +254,6 @@ Your browser does not support the audio element.
         
         
         <category>TECH</category>
-        
-      </item>
-    
-      <item>
-        <title>Cute BB-8</title>
-        <description>
-给博客增加一点动感:)
-
-&lt;img src=&quot;/mdres/posts/2018/bb8.gif&quot; width=&quot;400&quot; /&gt;
-</description>
-        <pubDate>Wed, 11 Apr 2018 13:04:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/11/cute-bot/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/11/cute-bot/</guid>
-        
-        <category>Cute</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>SUGAR</category>
         
       </item>
     
