@@ -9,7 +9,7 @@ type: page
 * content
 {:toc}
 
-此版面还在测试中……
+[CV](/mdres/cv/resume.pdf)
 
 <!-- ## 关于我
 
