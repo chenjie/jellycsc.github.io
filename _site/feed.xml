@@ -5,9 +5,173 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Apr 2018 19:05:20 -0400</pubDate>
-    <lastBuildDate>Sun, 22 Apr 2018 19:05:20 -0400</lastBuildDate>
-    <generator>Jekyll v3.7.3</generator>
+    <pubDate>Fri, 11 May 2018 19:34:55 -0400</pubDate>
+    <lastBuildDate>Fri, 11 May 2018 19:34:55 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.1</generator>
+    
+      <item>
+        <title>Pure Windows 10 ISO Installation File</title>
+        <description>
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;//www.youtube.com/embed/O0rHcKPFN6w&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 11 May 2018 15:15:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/11/windows-10-iso/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/11/windows-10-iso/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
+    
+      <item>
+        <title>Install OpenCV in FIVE minutes</title>
+        <description>
+5分钟轻松配置Windows下OpenCV环境
+
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;//www.youtube.com/embed/_s42jjWSviM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 10 May 2018 19:58:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/10/opencv-in-five-minutes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/opencv-in-five-minutes/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
+    
+      <item>
+        <title>Translate first attempt</title>
+        <description>
+Pro Deep Learning with TensorFlow：A Mathematical Approach to Advanced Artificial Intelligence in Python
+
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.doc {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;https://drive.google.com/file/d/1Z7E_-7Yq1Cp61VsnagN_qH8IHQbrtt_I/preview&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;doc&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 08 May 2018 06:49:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/08/translate-first-attempt/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/08/translate-first-attempt/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>BOOK</category>
+        
+      </item>
+    
+      <item>
+        <title>Properly setup SSH server</title>
+        <description>
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;//www.youtube.com/embed/Xi5CSNw_9f0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 06 May 2018 15:33:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/06/openssh-public-private-key/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/06/openssh-public-private-key/</guid>
+        
+        <category>Daily</category>
+        
+        <category>SSH</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
+    
+      <item>
+        <title>Git Rebase 的正确打开方式</title>
+        <description>
+&lt;a href=&quot;https://hackernoon.com/dont-fear-the-rebase-bca683888dae&quot;&gt;原文&lt;/a&gt;来自&lt;a href=&quot;https://hackernoon.com/@jared.ready&quot;&gt;Jared Ready&lt;/a&gt;，由&lt;a href=&quot;https://github.com/sqrthree&quot;&gt;根号三&lt;/a&gt;翻译，感谢&lt;a href=&quot;https://github.com/Tina92&quot;&gt;Tina92&lt;/a&gt;、&lt;a href=&quot;https://github.com/Starriers&quot;&gt;Starrier&lt;/a&gt;两位的校对。
+
+</description>
+        <pubDate>Sun, 22 Apr 2018 16:53:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/22/git-rebase/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/22/git-rebase/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>Git</category>
+        
+      </item>
     
       <item>
         <title>卷积神经网络输出大小公式</title>
@@ -101,159 +265,6 @@ These are the derivatives of $tan()$. Not too shabby!
         
         
         <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>深入理解LSTM记忆元网络</title>
-        <description>
-本文翻译源自&lt;a href=&quot;https://ai.google/brain-team/&quot;&gt;Google Brain&lt;/a&gt;机器学习研究员&lt;a href=&quot;https://github.com/colah/&quot;&gt;colah&lt;/a&gt;的&lt;a href=&quot;http://colah.github.io/&quot;&gt;博客&lt;/a&gt;，原文链接请点击&lt;a href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;这里&lt;/a&gt;。
-
-此文是本人翻译的处男作，耗时一天，若有翻译错误或不当的地方，欢迎在评论区指正(可能需要科学上网)。另外，引用或转载请注明&lt;a href=&quot;https://jellycsc.github.io/2018/04/13/understanding-lstm-networks/&quot;&gt;此文&lt;/a&gt;以及&lt;a href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;原文&lt;/a&gt;，谢谢合作！
-
-</description>
-        <pubDate>Fri, 13 Apr 2018 13:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/13/understanding-lstm-networks/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/13/understanding-lstm-networks/</guid>
-        
-        <category>RNN</category>
-        
-        
-        <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>XOR using NAND, AND, OR</title>
-        <description>
-This is a quite interesting problem. It’s not difficult but requires some effort. As long as what I wrote inspires you, you are no longer afraid of trying different logic gates and manipulating them. This is the essence of teaching and learning.
-
-</description>
-        <pubDate>Fri, 13 Apr 2018 10:12:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/13/xor-and-or-not/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/13/xor-and-or-not/</guid>
-        
-        <category>Logic</category>
-        
-        <category>Daily</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>Cross Entropy vs. Max likelihood</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#quick-proof-of-binary-classification&quot; id=&quot;markdown-toc-quick-proof-of-binary-classification&quot;&gt;Quick proof of binary classification:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-Maximizing likelihood function $\Rightarrow$ (because log based e is monotonically increasing) Maximizing &lt;strong&gt;log&lt;/strong&gt; likelihood function $\Rightarrow$ (toggles because of the minus sign) Minimizing &lt;strong&gt;negative&lt;/strong&gt; log likelihood function $\Rightarrow$ Minimizing cross entropy loss.
-
-&lt;h2 id=&quot;quick-proof-of-binary-classification&quot;&gt;Quick proof of binary classification:&lt;/h2&gt;
-Assume $y_1^* … y_N^*$ is a mini-batch of predictions generated (i.i.d) by your neural network. Each of them
-represents the probability of getting the correct prediction (i.e. matches the target). Assume the true targets are $t_1 … t_N$ where each of them is either 0 or 1.
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
--log[P(y_1^* ... y_N^*)] &amp; = -\sum_{i=1}^N log[P(y_i^*)] &amp;&amp;\text{Because of the i.i.d assumption.}&amp;\\
-\end{align} %]]&gt;&lt;/script&gt;
-
-If the target is 0,
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;log[P(y_i^*)] = log[1-P(y_i)] = (1-t_i) \cdot log[1-P(y_i)]&lt;/script&gt;
-
-If the target is 1,
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;log[P(y_i^*)] = t_i \cdot log[P(y_i)]&lt;/script&gt;
-
-And it doesn’t hurt to add 0 term to make the formula more general,
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(y_i^*) = t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]&lt;/script&gt;
-
-So,
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
--\sum_{i=1}^N log[P(y_i^*)] &amp; = -\sum_{i=1}^N t_i \cdot log[P(y_i)] + (1-t_i) \cdot log[1-P(y_i)]\\
- &amp; = CE
-\end{align} %]]&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Thu, 12 Apr 2018 15:45:54 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/12/cross-entropy-vs-maximum-likelihood/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/12/cross-entropy-vs-maximum-likelihood/</guid>
-        
-        <category>Math</category>
-        
-        <category>Stats</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>追光者</title>
-        <description>
-&lt;audio controls=&quot;&quot; controlsList=&quot;nodownload&quot;&gt;
-  &lt;source src=&quot;/mdres/posts/2018/zgz.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
-Your browser does not support the audio element.
-&lt;/audio&gt;
-</description>
-        <pubDate>Thu, 12 Apr 2018 12:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/12/zhui-guang-zhe/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/12/zhui-guang-zhe/</guid>
-        
-        <category>MP3</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>MUSIC</category>
-        
-      </item>
-    
-      <item>
-        <title>Nice Youtube Video</title>
-        <description>
-&lt;style type=&quot;text/css&quot;&gt;
-	.youtube_container {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 56.25%;
-	}
-
-	.video {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	}
-&lt;/style&gt;
-
-&lt;div class=&quot;youtube_container&quot;&gt;
-&lt;iframe src=&quot;//www.youtube.com/embed/3MRHcYtZjFY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 12 Apr 2018 10:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/12/youtube/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/12/youtube/</guid>
-        
-        <category>Youtube</category>
-        
-        <category>Daily</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>TECH</category>
         
       </item>
     
