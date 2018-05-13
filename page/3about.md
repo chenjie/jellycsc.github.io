@@ -9,7 +9,7 @@ type: page
 * content
 {:toc}
 
-[CV](/mdres/cv/resume.pdf)
+[CV](/mdres/cv/Resume.pdf)
 
 <!-- ## 关于我
 
