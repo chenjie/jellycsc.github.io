@@ -5,9 +5,79 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 May 2018 19:35:25 -0400</pubDate>
-    <lastBuildDate>Fri, 11 May 2018 19:35:25 -0400</lastBuildDate>
+    <pubDate>Sat, 12 May 2018 20:02:56 -0400</pubDate>
+    <lastBuildDate>Sat, 12 May 2018 20:02:56 -0400</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
+    
+      <item>
+        <title>My Awesome Video Downloader</title>
+        <description>
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;//www.youtube.com/embed/Qa9LQmJu9Do&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 12 May 2018 16:02:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/12/my-awesome-video-downloader/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/12/my-awesome-video-downloader/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
+    
+      <item>
+        <title>Windows 10 VMware Installation</title>
+        <description>
+&lt;style type=&quot;text/css&quot;&gt;
+	.youtube_container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	}
+
+	.video {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+&lt;/style&gt;
+
+&lt;div class=&quot;youtube_container&quot;&gt;
+&lt;iframe src=&quot;//www.youtube.com/embed/wcjB7_HcBiE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;video&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 11 May 2018 21:11:54 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/11/windows-10-installation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/11/windows-10-installation/</guid>
+        
+        <category>Daily</category>
+        
+        
+        <category>TECH</category>
+        
+      </item>
     
       <item>
         <title>Pure Windows 10 ISO Installation File</title>
@@ -224,44 +294,6 @@ Pro Deep Learning with TensorFlow：A Mathematical Approach to Advanced Artifici
         <category>RNN</category>
         
         <category>GAN</category>
-        
-        
-        <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>Click and enlarge image</title>
-        <description>
-试试点击图片吧！Try it!
-
-&lt;a href=&quot;/mdres/collections/apple-touch-icon.png&quot; data-lightbox=&quot;2018-04-15&quot;&gt;
-&lt;img src=&quot;/mdres/collections/apple-touch-icon.png&quot; width=&quot;30%&quot; /&gt; &lt;/a&gt;
-</description>
-        <pubDate>Sun, 15 Apr 2018 09:23:54 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/15/click-and-enlarge-image/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/15/click-and-enlarge-image/</guid>
-        
-        <category>Daily</category>
-        
-        <category>Feature</category>
-        
-        
-        <category>TECH</category>
-        
-      </item>
-    
-      <item>
-        <title>An example of using Autograd</title>
-        <description>
-These are the derivatives of $tan()$. Not too shabby!
-&lt;img src=&quot;/mdres/posts/2018/tangent.png&quot; alt=&quot;Tangent derivatives&quot; /&gt;
-</description>
-        <pubDate>Sat, 14 Apr 2018 13:01:54 -0400</pubDate>
-        <link>http://localhost:4000/2018/04/14/tangent-autograd/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/14/tangent-autograd/</guid>
-        
-        <category>Autograd</category>
         
         
         <category>ML</category>
