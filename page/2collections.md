@@ -14,7 +14,7 @@ type: page
 
 ## 爬梯工具
 
-* 我是纸飞机，让我**还**你自由。[[Link](/mdres/collections/ss.apk)]
+* 我是纸飞机，让我**还**你自由。安卓：[[Link](/mdres/collections/ss.apk)] PC：[[Link](/mdres/collections/ss.zip)]
 
 
 ## 建站相关
