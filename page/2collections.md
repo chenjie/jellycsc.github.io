@@ -16,7 +16,7 @@ type: page
 
 * 我是纸飞机，让我**还**你自由。
 
-| Android | Windows | macOS |
+| Android | Windows(v4.0.10) | macOS |
 |---------------------------------|---------------------------------|----------------------------------|
 |[Link](/mdres/collections/ss.apk)|[Link](/mdres/collections/ss.zip)|[Link](/mdres/collections/ssX.zip)|
 
@@ -26,6 +26,9 @@ type: page
 * [Favicon Generator](https://realfavicongenerator.net/) 一键生成网站图标logo的小工具  
 ![Acorn Logo](/mdres/collections/android-chrome-192x192.png)
 ![Penrose triangle Logo](/mdres/collections/apple-touch-icon.png)
+
+## 数学相关
+* [Desmos](https://www.desmos.com/calculator) 函数作图工具
 
 ## Comments
 
