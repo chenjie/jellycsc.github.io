@@ -9,7 +9,11 @@ type: page
 * content
 {:toc}
 
-[CV](/mdres/cv/Resume.pdf)
+I'm a fourth year undergraduate student, completing Computer Science Specialist and Mathematics Minor at the University of Toronto, St. George campus. My current focus is on Linux Operating System and Supervised Learning. 
+
+
+## CV
+Here is my [CV](/mdres/cv/Resume.pdf).
 
 <!-- ## 关于我
 
