@@ -40,3 +40,12 @@ Output &=(W - 3 + 2\cdot 1)/1 + 1\\
 \end{align*}$$
 
 所以输出的 spatial size 仍然保持 $W$ 不变。
+
+### Spatial Size 减半 --- 2018/9/22 更新
+$$F=4, P=1, S=2$$
+
+$$\begin{align*}
+Output &=(W - 4 + 2\cdot 1)/2 + 1\\
+       &=(W - 2)/2 + 1\\
+       &=W/2
+\end{align*}$$
