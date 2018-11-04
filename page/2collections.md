@@ -30,6 +30,9 @@ type: page
 ## 数学相关
 * [Desmos](https://www.desmos.com/calculator) 函数作图工具
 
+## PT相关
+* [sample_pt](/mdres/pdfs/sample_pt.pdf) 测试用
+
 ## Comments
 
 {% include comments.html %}
